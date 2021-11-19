@@ -58,7 +58,10 @@ body {
   min-width: 320px;
   min-height: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 500; }
 
 a {
   text-decoration: none; }
@@ -105,7 +108,6 @@ img {
 
 .site-pages li {
   margin-bottom: 10px;
-  font-family: "Poppins", "Verdana", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -119,3 +121,125 @@ img {
 
 .site-pages a {
   color: #1d1613; }
+
+.page-header {
+  position: relative; }
+
+.page-header__toggle {
+  display: none; }
+
+.page-header__logo-link {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 66px;
+  height: 66px; }
+
+.page-header__logo-link svg {
+  width: 66px;
+  height: 66px;
+  fill: #a87b62; }
+
+.page-header__wrapper-navigation-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 42px 30px 52px 30px;
+  box-sizing: border-box; }
+
+.page-header__field-input-search {
+  position: relative;
+  width: 184px; }
+
+.page-header__field-input-search svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  fill: #000000; }
+
+.page-header__field-input-search input {
+  width: 184px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1d1613;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .page-header__field-input-search input::placeholder {
+    color: #9b9997; }
+
+.page-header__list-navigation-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 154px;
+  box-sizing: border-box; }
+
+.page-header__item-navigation-user {
+  margin-left: 35px; }
+
+.page-header__item-navigation-user a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1d1613; }
+
+.page-header__item-navigation-user--cart span:first-child {
+  margin-right: 6px; }
+
+.page-header__item-navigation-user svg {
+  display: none;
+  stroke: #1d1613;
+  fill: #ffffff; }
+
+.page-header__wrapper-navigation-bottom {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  border-top: 1px solid #f6f5f4; }
+
+.page-header__list-navigation-jewellery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 538px;
+  padding-left: 11px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.page-header__item-navigation-jewellery {
+  padding-left: 17px;
+  padding-right: 17px; }
+
+.page-header__item-navigation-jewellery a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d1613; }
+
+.page-header__list-navigation-company {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none; }

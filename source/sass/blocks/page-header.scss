@@ -1,0 +1,155 @@
+.page-header {
+  position: relative;
+}
+
+//Кнопка-гамбургер
+.page-header__toggle {
+  display: none;
+}
+
+//Логотип
+.page-header__logo-link {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+.page-header__logo-link svg {
+  width: 66px;
+  height: 66px;
+
+  fill: $brown;
+}
+
+//Верхнее меню на десктопе
+.page-header__wrapper-navigation-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 42px 30px 52px 30px;
+  box-sizing: border-box;
+}
+
+
+//Поле поиска
+.page-header__field-input-search {
+  position: relative;
+  width: 184px;
+}
+
+.page-header__field-input-search svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 14px;
+
+  fill: $black;
+}
+
+.page-header__field-input-search input {
+  width: 184px;
+  padding-left: 30px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black-text;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+
+//Навигация пользователя
+.page-header__list-navigation-user {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 154px;
+  box-sizing: border-box;
+}
+
+.page-header__item-navigation-user {
+  margin-left: 35px;
+}
+
+.page-header__item-navigation-user a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black-text;
+}
+
+.page-header__item-navigation-user--cart span:first-child {
+  margin-right: 6px;
+}
+
+.page-header__item-navigation-user svg {
+  display: none;
+
+  stroke: $black-text;
+  fill: $white;
+}
+
+//Нижнее меню на десктопе
+.page-header__wrapper-navigation-bottom {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  border-top: 1px solid $grey-light;
+}
+
+//Навигация по сайту Украшения
+.page-header__list-navigation-jewellery {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 538px;
+  padding-left: 11px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-header__item-navigation-jewellery {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.page-header__item-navigation-jewellery a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-text;
+}
+
+//Навигация по сайту О Компании
+.page-header__list-navigation-company {
+  @include reset-style-list;
+
+  display: none;
+}

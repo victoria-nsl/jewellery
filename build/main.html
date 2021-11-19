@@ -6,9 +6,114 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Exclusive Jewellery: PERFECTION made to be yours">
   <title>Jewellery</title>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+
+  <header class="page-header page-header--closed page-header--nojs ">
+    <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
+    page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
+    page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
+    <button class="page-header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <a class="page-header__logo-link">
+      <svg role="img" width="66" height="66">
+        <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <nav class="page-header__navigation">
+      <div class="page-header__wrapper-navigation-top">
+        <form class="page-header__form" method="post" action="https://echo.htmlacademy.ru">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <div class="page-header__field-input-search">
+            <input id="search" type="search" name="text" placeholder="Type here to search">
+            <svg role="img" width="14" height="14" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+            </svg>
+          </div>
+        </form>
+        <ul class="page-header__list-navigation-user">
+          <li class="page-header__item-navigation-user">
+            <a href="#">
+              Login
+            </a>
+          </li>
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
+            <a href="#">
+              <span>Cart</span><span>0</span>
+              <svg role="img" width="18" height="16">
+                <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-header__wrapper-navigation-bottom">
+        <ul class="page-header__list-navigation-jewellery">
+          <li class="page-header__item-navigation-jewellery">
+            <a href="#">
+              What’s new
+            </a>
+          </li>
+          <li class="page-header__item-navigation-jewellery">
+            <a href="#">
+              Chokers
+            </a>
+          </li>
+          <li class="page-header__item-navigation-jewellery">
+            <a href="#">
+              Necklaces
+            </a>
+          </li>
+          <li class="page-header__item-navigation-jewellery">
+            <a href="#">
+              Rings
+            </a>
+          </li>
+          <li class="page-header__item-navigation-jewellery">
+            <a href="#">
+              Earrings
+            </a>
+          </li>
+        </ul>
+
+        <ul class="page-header__list-navigation-company">
+          <li class="page-header__item-navigation-company">
+            <a href="#">
+              About CH
+            </a>
+          </li>
+          <li class="page-header__item-navigation-company">
+            <a href="#">
+              Stores & Hours
+            </a>
+          </li>
+          <li class="page-header__item-navigation-company">
+            <a href="#">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+  </main>
+
+  <footer class="page-footer">
+
+ </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
