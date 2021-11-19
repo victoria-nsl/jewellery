@@ -1,0 +1,48 @@
+.site-pages {
+  width: 290px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+.site-pages h1 {
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: $black-text;
+}
+
+.site-pages ul {
+  @include reset-style-list;
+
+  margin: 0;
+  padding: 0;
+
+  counter-reset: list;
+}
+
+.site-pages li {
+  margin-bottom: 10px;
+
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black-text;
+}
+
+.site-pages li::before {
+  padding-right: 5px;
+
+  content: counter(list) ".";
+  counter-increment: list;
+}
+
+.site-pages a {
+  color: $black;
+}
