@@ -1,10 +1,106 @@
 .page-header {
   position: relative;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 55px;
+
+    background-color: $brown;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 38px;
+  }
+}
+
+.page-header--closed {
+  @media (max-width: $tablet-max-width) {
+    background-color: $white;
+  }
+}
+
+.page-header--nojs {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 126px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 92px;
+  }
+}
+
+.page-header--opened {
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+  }
 }
 
 //Кнопка-гамбургер
 .page-header__toggle {
+  position: relative;
+
   display: none;
+  width: 25px;
+  height: 16px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    margin-bottom: 55px;
+    margin-left: 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 38px;
+    margin-left: 15px;
+  }
+}
+
+.page-header--nojs .page-header__toggle {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__toggle {
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 124px;
+  }
+}
+
+.page-header__toggle::before {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  content: "";
+
+  width: 25px;
+  height: 2px;
+
+  background-color: $white;
+  box-shadow: 0 8px 0 0 $white, 0 -8px 0 0 $white;
+}
+
+.page-header--closed .page-header__toggle::before {
+  @media (max-width: $tablet-max-width) {
+    background-color: $black-text;
+    box-shadow: 0 8px 0 0 $black-text, 0 -8px 0 0 $black-text;
+  }
 }
 
 //Логотип
@@ -13,9 +109,15 @@
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
+
   display: block;
   width: 66px;
   height: 66px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .page-header__logo-link svg {
@@ -23,7 +125,71 @@
   height: 66px;
 
   fill: $brown;
+
+  @media (max-width: $tablet-max-width) {
+    fill: $white;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 52px;
+    height: 52px;
+  }
 }
+
+.page-header--closed .page-header__logo-link svg {
+  @media (max-width: $tablet-max-width) {
+    fill: $brown;
+  }
+}
+
+//Навигация
+.page-header__navigation {
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    background-color: $brown;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.page-header--closed .page-header__navigation {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 0;
+  }
+}
+
+.page-header--nojs .page-header__navigation {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 96px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 85px;
+    padding-bottom: 80px;
+  }
+}
+
+.page-header--opened .page-header__navigation {
+  @media (max-width: $tablet-max-width) {
+    height: calc(100vh - 231px);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    height: calc(100vh - 187px);
+  }
+}
+
 
 //Верхнее меню на десктопе
 .page-header__wrapper-navigation-top {
@@ -35,13 +201,52 @@
   margin: 0 auto;
   padding: 42px 30px 52px 30px;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    order: 2;
+    padding: 0;
+  }
 }
 
-
 //Поле поиска
+.page-header__form {
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 136px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 102px;
+  }
+}
+
+.page-header--closed .page-header__form {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header--nojs .page-header__form {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
 .page-header__field-input-search {
   position: relative;
+
   width: 184px;
+
+  @media (max-width: $tablet-max-width) {
+    width: calc(100vw - 90px);
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: calc(100vw - 30px);
+  }
 }
 
 .page-header__field-input-search svg {
@@ -52,8 +257,12 @@
 
   width: 14px;
   height: 14px;
-
   fill: $black;
+
+  @media (max-width: $tablet-max-width) {
+    left: 12px;
+    fill: $white;
+  }
 }
 
 .page-header__field-input-search input {
@@ -76,8 +285,20 @@
   &::placeholder {
     color: $grey;
   }
-}
 
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    height: 40px;
+    padding-left: 35px;
+
+    background-color: rgba($white, 0.15);
+    border-radius: 21px;
+
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+}
 
 //Навигация пользователя
 .page-header__list-navigation-user {
@@ -88,10 +309,19 @@
   align-items: center;
   width: 154px;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+  }
 }
 
 .page-header__item-navigation-user {
   margin-left: 35px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .page-header__item-navigation-user a {
@@ -100,24 +330,99 @@
   font-size: 14px;
   line-height: 21px;
   color: $black-text;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 18px;
+    line-height: 130%;
+    color: $white;
+  }
+}
+
+//Корзина
+.page-header__item-navigation-user--cart a {
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 55px;
+    right: 45px;
+
+    display: block;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 38px;
+    right: 15px;
+  }
+}
+
+.page-header__item-navigation-user--cart span {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
 }
 
 .page-header__item-navigation-user--cart span:first-child {
   margin-right: 6px;
 }
 
-.page-header__item-navigation-user svg {
+.page-header__item-navigation-user--cart svg {
   display: none;
+  width: 18px;
+  height: 16px;
 
-  stroke: $black-text;
-  fill: $white;
+  @media (max-width: $tablet-max-width) {
+    display: block;
+
+    stroke: $white;
+    fill: $brown;
+  }
+}
+
+.page-header--closed .page-header__item-navigation-user--cart svg {
+  @media (max-width: $tablet-max-width) {
+    stroke: $black-text;
+    fill: $white;
+  }
+}
+
+//Логин
+.page-header--closed .page-header__item-navigation-user--login {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header--nojs .page-header__item-navigation-user--login {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
 }
 
 //Нижнее меню на десктопе
 .page-header__wrapper-navigation-bottom {
   padding-top: 18px;
   padding-bottom: 19px;
+
   border-top: 1px solid $grey-light;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    order: 1;
+    padding: 0;
+
+    border-top: none;
+  }
+}
+
+.page-header--closed .page-header__wrapper-navigation-bottom {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-header--nojs .page-header__wrapper-navigation-bottom {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
 }
 
 //Навигация по сайту Украшения
@@ -132,11 +437,37 @@
   padding-left: 11px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 29px;
+  }
 }
 
 .page-header__item-navigation-jewellery {
   padding-left: 17px;
   padding-right: 17px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    text-align: start;
+  }
+}
+
+.page-header__item-navigation-jewellery:not(:last-child) {
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .page-header__item-navigation-jewellery a {
@@ -145,6 +476,12 @@
   font-size: 16px;
   line-height: 24px;
   color: $black-text;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+  }
 }
 
 //Навигация по сайту О Компании
@@ -152,4 +489,29 @@
   @include reset-style-list;
 
   display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.page-header__item-navigation-company:not(:last-child) {
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.page-header__item-navigation-company a {
+  @media (max-width: $tablet-max-width) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: rgba($white, 0.75);
+  }
 }

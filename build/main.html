@@ -17,11 +17,10 @@
 </head>
 
 <body>
-
-  <header class="page-header page-header--closed page-header--nojs ">
-    <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
+ <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
     page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
     page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
+  <header class="page-header page-header--closed page-header--nojs">
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
@@ -42,7 +41,7 @@
           </div>
         </form>
         <ul class="page-header__list-navigation-user">
-          <li class="page-header__item-navigation-user">
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--login">
             <a href="#">
               Login
             </a>
@@ -113,7 +112,7 @@
 
   <footer class="page-footer">
 
- </footer>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
