@@ -346,7 +346,7 @@
   }
 }
 
-.page-header__item-navigation-user a {
+.page-header__link-navigation-user {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -361,7 +361,7 @@
 }
 
 //Корзина
-.page-header__item-navigation-user--cart a {
+.page-header__link-navigation-user--cart {
   @media (max-width: $tablet-max-width) {
     position: absolute;
     top: 55px;
@@ -376,7 +376,7 @@
   }
 }
 
-.page-header__item-navigation-user--cart p {
+.page-header__link-navigation-user--cart p {
   margin: 0;
   display: flex;
 
@@ -385,11 +385,11 @@
   }
 }
 
-.page-header__item-navigation-user--cart span:first-child {
+.page-header__link-navigation-user--cart span:first-child {
   margin-right: 6px;
 }
 
-.page-header__item-navigation-user--cart svg {
+.page-header__link-navigation-user--cart svg {
   display: none;
   width: 18px;
   height: 16px;
@@ -402,14 +402,14 @@
   }
 }
 
-.page-header--closed .page-header__item-navigation-user--cart svg {
+.page-header--closed .page-header__link-navigation-user--cart svg {
   @media (max-width: $tablet-max-width) {
     stroke: $black-text;
     fill: $white;
   }
 }
 
-.page-header--nojs .page-header__item-navigation-user--cart svg {
+.page-header--nojs .page-header__link-navigation-user--cart svg {
   @media (max-width: $tablet-max-width) {
     stroke: $white;
     fill: $brown;
@@ -546,4 +546,57 @@
     line-height: 130%;
     color: rgba($white, 0.75);
   }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.page-header__item-navigation-jewellery a:hover,
+.page-header__item-navigation-company a:hover,
+.page-header__link-navigation-user:hover {
+  color: $brown-dark;
+}
+
+.page-header__item-navigation-user--cart:hover svg {
+  stroke: $brown-dark;
+}
+
+.page-header__form input:hover {
+  outline: 1px solid $brown-dark;
+}
+
+.page-header__toggle:hover::before {
+  background-color: $brown-dark;
+  box-shadow: 0 8px 0 0 $brown-dark, 0 -8px 0 0 $brown-dark;
+}
+
+.page-header__logo-link[href]:hover svg {
+  fill: $brown-dark;
+}
+
+//focus
+.page-header__item-navigation-jewellery a:focus,
+.page-header__item-navigation-company a:focus,
+.page-header__link-navigation-user--login:focus,
+.page-header__link-navigation-user--cart:focus svg,
+.page-header__link-navigation-user--cart:focus p,
+.page-header__form input:focus,
+.page-header__toggle:focus,
+.page-header__logo-link[href]:focus {
+  outline: 2px solid $brown-dark;
+}
+
+//active
+.page-header__item-navigation-jewellery a:active,
+.page-header__item-navigation-company a:active,
+.page-header__link-navigation-user--login:active,
+.page-header__link-navigation-user--cart:active svg,
+.page-header__link-navigation-user--cart:active p,
+.page-header__toggle:active,
+.page-header__logo-link[href]:active {
+  outline: none;
+  opacity: 0.5;
+}
+
+.page-header__form input:active {
+  opacity: 0.5;
 }

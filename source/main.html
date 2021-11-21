@@ -28,26 +28,26 @@
       <div class="page-header__wrapper-navigation-top">
         <form class="page-header__form" method="post" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
-          <input id="search" type="search" name="text" placeholder="Type here to search">
+          <input id="search" type="search" name="text" placeholder="Type here to search" autocomplete="off">
           <button class="page-header__button-search" type="submit" aria-label="Отправить запрос с поиском">
             <svg role="img" width="14" height="14" aria-hidden="true">
               <use xlink:href="img/sprite_auto.svg#icon-search"></use>
             </svg>
           </button>
         </form>
-        <a class="page-header__logo-link" >
+        <a class="page-header__logo-link">
           <svg role="img" width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
         </a>
         <ul class="page-header__list-navigation-user">
           <li class="page-header__item-navigation-user page-header__item-navigation-user--login">
-            <a href="#">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--login" href="#">
               Login
             </a>
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
-            <a href="#">
+            <a  class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#">
               <p>
                 <span>Cart</span>
                 <span>0</span>

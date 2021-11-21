@@ -382,57 +382,57 @@ img {
       width: 100%;
       margin-left: 0; } }
 
-.page-header__item-navigation-user a {
+.page-header__link-navigation-user {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #1d1613; }
   @media (max-width: 1023px) {
-    .page-header__item-navigation-user a {
+    .page-header__link-navigation-user {
       font-size: 18px;
       line-height: 130%;
       color: #ffffff; } }
 
 @media (max-width: 1023px) {
-  .page-header__item-navigation-user--cart a {
+  .page-header__link-navigation-user--cart {
     position: absolute;
     top: 55px;
     right: 45px;
     display: block; } }
 
 @media (max-width: 767px) {
-  .page-header__item-navigation-user--cart a {
+  .page-header__link-navigation-user--cart {
     top: 38px;
     right: 15px; } }
 
-.page-header__item-navigation-user--cart p {
+.page-header__link-navigation-user--cart p {
   margin: 0;
   display: flex; }
   @media (max-width: 1023px) {
-    .page-header__item-navigation-user--cart p {
+    .page-header__link-navigation-user--cart p {
       display: none; } }
 
-.page-header__item-navigation-user--cart span:first-child {
+.page-header__link-navigation-user--cart span:first-child {
   margin-right: 6px; }
 
-.page-header__item-navigation-user--cart svg {
+.page-header__link-navigation-user--cart svg {
   display: none;
   width: 18px;
   height: 16px; }
   @media (max-width: 1023px) {
-    .page-header__item-navigation-user--cart svg {
+    .page-header__link-navigation-user--cart svg {
       display: block;
       stroke: #ffffff;
       fill: #a87b62; } }
 
 @media (max-width: 1023px) {
-  .page-header--closed .page-header__item-navigation-user--cart svg {
+  .page-header--closed .page-header__link-navigation-user--cart svg {
     stroke: #1d1613;
     fill: #ffffff; } }
 
 @media (max-width: 1023px) {
-  .page-header--nojs .page-header__item-navigation-user--cart svg {
+  .page-header--nojs .page-header__link-navigation-user--cart svg {
     stroke: #ffffff;
     fill: #a87b62; } }
 
@@ -536,6 +536,48 @@ img {
     font-size: 18px;
     line-height: 130%;
     color: rgba(255, 255, 255, 0.75); } }
+
+/*=============СТАЙЛГАЙД============*/
+.page-header__item-navigation-jewellery a:hover,
+.page-header__item-navigation-company a:hover,
+.page-header__link-navigation-user:hover {
+  color: #6B3906; }
+
+.page-header__item-navigation-user--cart:hover svg {
+  stroke: #6B3906; }
+
+.page-header__form input:hover {
+  outline: 1px solid #6B3906; }
+
+.page-header__toggle:hover::before {
+  background-color: #6B3906;
+  box-shadow: 0 8px 0 0 #6B3906, 0 -8px 0 0 #6B3906; }
+
+.page-header__logo-link[href]:hover svg {
+  fill: #6B3906; }
+
+.page-header__item-navigation-jewellery a:focus,
+.page-header__item-navigation-company a:focus,
+.page-header__link-navigation-user--login:focus,
+.page-header__link-navigation-user--cart:focus svg,
+.page-header__link-navigation-user--cart:focus p,
+.page-header__form input:focus,
+.page-header__toggle:focus,
+.page-header__logo-link[href]:focus {
+  outline: 2px solid #6B3906; }
+
+.page-header__item-navigation-jewellery a:active,
+.page-header__item-navigation-company a:active,
+.page-header__link-navigation-user--login:active,
+.page-header__link-navigation-user--cart:active svg,
+.page-header__link-navigation-user--cart:active p,
+.page-header__toggle:active,
+.page-header__logo-link[href]:active {
+  outline: none;
+  opacity: 0.5; }
+
+.page-header__form input:active {
+  opacity: 0.5; }
 
 .page-no-scroll {
   height: 100vh;
