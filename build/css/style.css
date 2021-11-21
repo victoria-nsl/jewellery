@@ -152,6 +152,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 20;
     width: 100%;
     height: 100%; } }
 
@@ -284,8 +285,7 @@ img {
   line-height: 21px;
   color: #1d1613;
   border: none;
-  background-color: transparent;
-  cursor: pointer; }
+  background-color: transparent; }
   .page-header__form input::placeholder {
     color: #9b9997; }
   @media (max-width: 1023px) {
@@ -306,8 +306,8 @@ img {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 23px;
+  height: 23px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -315,8 +315,8 @@ img {
   @media (max-width: 1023px) {
     .page-header__button-search {
       left: 12px;
-      width: 16px;
-      height: 16px; } }
+      width: 40px;
+      height: 40px; } }
 
 .page-header__button-search svg {
   width: 14px;
@@ -541,20 +541,23 @@ img {
 .page-header__item-navigation-jewellery a:hover,
 .page-header__item-navigation-company a:hover,
 .page-header__link-navigation-user:hover {
-  color: #6B3906; }
+  color: #6b3906; }
 
 .page-header__item-navigation-user--cart:hover svg {
-  stroke: #6B3906; }
+  stroke: #6b3906; }
 
 .page-header__form input:hover {
-  outline: 1px solid #6B3906; }
+  outline: 1px solid #6b3906; }
 
 .page-header__toggle:hover::before {
-  background-color: #6B3906;
-  box-shadow: 0 8px 0 0 #6B3906, 0 -8px 0 0 #6B3906; }
+  background-color: #6b3906;
+  box-shadow: 0 8px 0 0 #6b3906, 0 -8px 0 0 #6b3906; }
 
 .page-header__logo-link[href]:hover svg {
-  fill: #6B3906; }
+  fill: #6b3906; }
+
+.page-header__button-search:hover svg {
+  fill: #6b3906; }
 
 .page-header__item-navigation-jewellery a:focus,
 .page-header__item-navigation-company a:focus,
@@ -563,8 +566,9 @@ img {
 .page-header__link-navigation-user--cart:focus p,
 .page-header__form input:focus,
 .page-header__toggle:focus,
-.page-header__logo-link[href]:focus {
-  outline: 2px solid #6B3906; }
+.page-header__logo-link[href]:focus,
+.page-header__button-search:focus {
+  outline: 2px solid #6b3906; }
 
 .page-header__item-navigation-jewellery a:active,
 .page-header__item-navigation-company a:active,
@@ -572,12 +576,179 @@ img {
 .page-header__link-navigation-user--cart:active svg,
 .page-header__link-navigation-user--cart:active p,
 .page-header__toggle:active,
-.page-header__logo-link[href]:active {
+.page-header__logo-link[href]:active,
+.page-header__button-search:active {
   outline: none;
   opacity: 0.5; }
 
 .page-header__form input:active {
   opacity: 0.5; }
+
+.page-footer {
+  background-color: #000000; }
+
+.page-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 91px 30px 72px 30px;
+  box-sizing: border-box; }
+
+.page-footer__news-updates {
+  width: 42.7%; }
+
+.page-footer__news-updates h2 {
+  margin: 0;
+  margin-bottom: 11px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.025em;
+  color: #ffffff; }
+
+.page-footer__news-updates p {
+  margin: 0;
+  margin-bottom: 39px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #9b9997; }
+
+.page-footer__form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ffffff; }
+
+.page-footer__form input {
+  width: 78%;
+  height: 27px;
+  padding-left: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  border: none;
+  background-color: transparent; }
+  .page-footer__form input::placeholder {
+    color: #9b9997; }
+
+.page-footer__button-email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 103px;
+  height: 27px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+.page-footer__button-email span:first-child {
+  stroke: #ffffff; }
+
+.page-footer__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 49.6%;
+  padding-top: 3px; }
+
+.page-footer__list-navigation-service-customer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 177px; }
+
+.page-footer__list-navigation-company {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 136px; }
+
+.page-footer__list-navigation-social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 115px;
+  margin-left: 20px; }
+
+.page-footer__item-navigation-service-customer,
+.page-footer__item-navigation-company,
+.page-footer__item-navigation-social {
+  margin-bottom: 18px; }
+
+.page-footer__item-navigation-service-customer a,
+.page-footer__item-navigation-company a,
+.page-footer__item-navigation-social a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ffffff; }
+
+.page-footer__item-navigation-social svg {
+  fill: #ffffff; }
+
+.page-footer__item-navigation-social--facebook svg {
+  width: 8px;
+  height: 15px;
+  margin-right: 15px; }
+
+.page-footer__item-navigation-social--instagram svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 11px; }
+
+.page-footer__item-navigation-social--pinterest svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px; }
+
+.page-footer__item-navigation-social--twitter svg {
+  width: 15px;
+  height: 13px;
+  margin-right: 15px; }
+
+/*=============СТАЙЛГАЙД============*/
+.page-footer__item-navigation-service-customer a:hover,
+.page-footer__item-navigation-company a:hover,
+.page-footer__item-navigation-social a:hover,
+.page-footer__button-email:hover {
+  opacity: 0.7; }
+
+.page-footer__form input:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.page-footer__item-navigation-service-customer a:focus,
+.page-footer__item-navigation-company a:focus,
+.page-footer__item-navigation-social a:focus,
+.page-footer__form input:focus,
+.page-footer__button-email:focus {
+  outline: 2px solid #ffffff; }
+
+.page-footer__item-navigation-service-customer a:active,
+.page-footer__item-navigation-company a:active,
+.page-footer__item-navigation-social a:active,
+.page-footer__button-email:active,
+.page-footer__form input:active,
+.page-footer__button-email:active {
+  opacity: 0.4;
+  outline: none; }
 
 .page-no-scroll {
   height: 100vh;

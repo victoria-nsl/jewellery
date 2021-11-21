@@ -37,6 +37,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 20;
 
     width: 100%;
     height: 100%;
@@ -215,8 +216,6 @@
   border: none;
   background-color: transparent;
 
-  cursor: pointer;
-
   &::placeholder {
     color: $grey;
   }
@@ -245,8 +244,8 @@
   left: 0;
   transform: translateY(-50%);
 
-  width: 14px;
-  height: 14px;
+  width: 23px;
+  height: 23px;
   padding: 0;
 
   border: none;
@@ -256,8 +255,8 @@
   @media (max-width: $tablet-max-width) {
     left: 12px;
 
-    width: 16px;
-    height: 16px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -573,6 +572,10 @@
   fill: $brown-dark;
 }
 
+.page-header__button-search:hover svg {
+  fill: $brown-dark;
+}
+
 //focus
 .page-header__item-navigation-jewellery a:focus,
 .page-header__item-navigation-company a:focus,
@@ -581,7 +584,8 @@
 .page-header__link-navigation-user--cart:focus p,
 .page-header__form input:focus,
 .page-header__toggle:focus,
-.page-header__logo-link[href]:focus {
+.page-header__logo-link[href]:focus,
+.page-header__button-search:focus {
   outline: 2px solid $brown-dark;
 }
 
@@ -592,7 +596,8 @@
 .page-header__link-navigation-user--cart:active svg,
 .page-header__link-navigation-user--cart:active p,
 .page-header__toggle:active,
-.page-header__logo-link[href]:active {
+.page-header__logo-link[href]:active,
+.page-header__button-search:active {
   outline: none;
   opacity: 0.5;
 }

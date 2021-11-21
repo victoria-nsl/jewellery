@@ -26,10 +26,10 @@
     </button>
     <nav class="page-header__navigation">
       <div class="page-header__wrapper-navigation-top">
-        <form class="page-header__form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="search">Поиск по сайту</label>
+        <form class="page-header__form" method="get" action="https://echo.htmlacademy.ru">
+          <label class="visually-hidden" for="search">Site search</label>
           <input id="search" type="search" name="text" placeholder="Type here to search" autocomplete="off">
-          <button class="page-header__button-search" type="submit" aria-label="Отправить запрос с поиском">
+          <button class="page-header__button-search" type="submit" aria-label="Send a search request">
             <svg role="img" width="14" height="14" aria-hidden="true">
               <use xlink:href="img/sprite_auto.svg#icon-search"></use>
             </svg>
@@ -110,11 +110,107 @@
   </header>
 
   <main class="page-main">
+    <h1 class="visually-hidden">Jewellery CH</h1>
 
   </main>
 
   <footer class="page-footer">
-
+    <div class="page-footer__inner">
+      <section class="page-footer__news-updates">
+        <h2>The good stuff in your inbox </h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form class="page-footer__form" method="get" action="https://echo.htmlacademy.ru">
+          <label class="visually-hidden" for="email">Your E-mail</label>
+          <input id="email" type="email" name="email" placeholder="Your E-mail" autocomplete="off">
+          <button class="page-footer__button-email" type="submit">
+            <span>Sign Up</span>
+            <svg role="img" width="30" height="11" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow-right-footer"></use>
+            </svg>
+          </button>
+        </form>
+      </section>
+      <nav class="page-footer__navigation">
+        <ul class="page-footer__list-navigation-service-customer">
+          <li class="page-footer__item-navigation-service-customer">
+            <a href="#">
+              Ordering & Payment
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-service-customer">
+            <a href="#">
+              Terms & Conditions
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-service-customer">
+            <a href="#">
+              Returns & Exchanges
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-service-customer">
+            <a href="#">
+              Delivery
+            </a>
+          </li>
+        </ul>
+        <ul class="page-footer__list-navigation-company">
+          <li class="page-footer__item-navigation-company">
+            <a href="#">
+              About CH
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-company">
+            <a href="#">
+              Stores & Hours
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-company">
+            <a href="#">
+              Jobs
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-company">
+            <a href="#">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+        <ul class="page-footer__list-navigation-social">
+          <li class="page-footer__item-navigation-social page-footer__item-navigation-social--facebook">
+            <a href="#">
+              <svg role="img" width="8" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-social page-footer__item-navigation-social--instagram">
+            <a href="#">
+              <svg role="img" width="15&quot;" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-social page-footer__item-navigation-social--pinterest">
+            <a href="#">
+              <svg role="img" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="page-footer__item-navigation-social page-footer__item-navigation-social--twitter">
+            <a href="#">
+              <svg role="img" width="15" height="13" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>
