@@ -2,18 +2,16 @@
   max-width: 1230px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 131px;
+  margin-bottom: 129px;
   padding: 0 30px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-max-width) {
-    width: 768px;
     margin-bottom: 80px;
     padding: 0 45px;
   }
 
   @media (max-width: $mobile-max-width) {
-    width: 320px;
     margin-bottom: 71px;
     padding: 0 15px;
   }
@@ -86,17 +84,13 @@
   column-gap: 2.3%;
   row-gap: 34px;
 
-
   @media (max-width: $tablet-max-width) {
-    grid-template-columns: 133px 231px 133px 133px;
-    grid-template-rows: auto auto;
-    column-gap: 16px;
     row-gap: 20px;
 
     @media (max-width: $mobile-max-width) {
-      grid-template-columns: 133px 133px;
+      grid-template-columns: 45.8% 45.8%;
       grid-template-rows: auto auto auto;
-      column-gap: 24px;
+      column-gap: 8.4%;
       row-gap: 27px;
     }
   }
@@ -107,24 +101,21 @@
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-  max-height: 412px;
 
   @media (max-width: $tablet-max-width) {
-    max-height: 240px;
+    min-height: 240px;
   }
 
   @media (max-width: $mobile-max-width) {
-    max-height: 247px;
+    min-height: 247px;
   }
 }
 
 .instagram__item--1,
 .instagram__item--3,
 .instagram__item--4 {
-  max-height: 230px;
-
   @media (max-width: $tablet-max-width) {
-    max-height: 133px;
+    min-height: 133px;
   }
 }
 
@@ -138,14 +129,13 @@
 .instagram__item--5,
 .instagram__item--6,
 .instagram__item--7 {
-  max-height: 150px;
-
   @media (max-width: $tablet-max-width) {
-    max-height: 87px;
+    min-height: 87px;
   }
 }
 
 .instagram__item img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;

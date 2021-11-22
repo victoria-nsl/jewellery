@@ -13,11 +13,11 @@
 
   @media (max-width: $tablet-max-width) {
     flex-direction: column;
-    padding: 49px 150px 32px 45px;
+    padding: 49px 150px 40px 45px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 49px 15px 34px 15px;
+    padding: 49px 15px 37px 15px;
   }
 }
 
@@ -32,6 +32,10 @@
     box-sizing: border-box;
   }
 
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 41px;
+  }
+
   @media (max-width: $mobile-max-width) {
     padding-right: 0;
   }
@@ -39,7 +43,7 @@
 
 .page-footer__news-updates h2 {
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: normal;
@@ -48,6 +52,10 @@
   line-height: 130%;
   letter-spacing: 0.02em;
   color: $white;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 11px;
+  }
 
   @media (max-width: $mobile-max-width) {
     width: 73.4%;
@@ -67,6 +75,7 @@
   @media (max-width: $mobile-max-width) {
     width: 77.9%;
     line-height: 140%;
+    margin-bottom: 38px;
   }
 }
 
@@ -84,7 +93,7 @@
 
 .page-footer__form input {
   width: 78%;
-  height: 27px;
+  height: 29px;
   padding-left: 0;
 
   font-family: inherit;
@@ -103,6 +112,7 @@
 
   @media (max-width: $mobile-max-width) {
     width: 55%;
+    height: 27px;
   }
 }
 
@@ -201,7 +211,7 @@
 .page-footer__item-navigation-social {
   margin-bottom: 18px;
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $tablet-max-width) {
     margin-bottom: 16px;
   }
 }
