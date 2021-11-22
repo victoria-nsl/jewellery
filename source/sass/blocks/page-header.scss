@@ -241,7 +241,7 @@
 .page-header__button-search {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -5px;
   transform: translateY(-50%);
 
   width: 23px;
@@ -253,6 +253,7 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
+    left: 0;
     width: 42px;
     height: 42px;
   }
@@ -427,7 +428,7 @@
 
 //Нижнее меню на десктопе
 .page-header__wrapper-navigation-bottom {
-  padding-top: 18px;
+  padding-top: 16px;
   padding-bottom: 19px;
 
   border-top: 1px solid $grey-light;

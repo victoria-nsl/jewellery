@@ -303,7 +303,7 @@ img {
 .page-header__button-search {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -5px;
   transform: translateY(-50%);
   width: 23px;
   height: 23px;
@@ -313,6 +313,7 @@ img {
   cursor: pointer; }
   @media (max-width: 1023px) {
     .page-header__button-search {
+      left: 0;
       width: 42px;
       height: 42px; } }
 
@@ -442,7 +443,7 @@ img {
     display: block; } }
 
 .page-header__wrapper-navigation-bottom {
-  padding-top: 18px;
+  padding-top: 16px;
   padding-bottom: 19px;
   border-top: 1px solid #f6f5f4; }
   @media (max-width: 1023px) {
@@ -824,3 +825,131 @@ img {
 .page-no-scroll {
   height: 100vh;
   overflow: hidden; }
+
+.promo--main {
+  padding-top: 182px;
+  padding-bottom: 181px;
+  background-color: #a87b62;
+  background-image: url("../img/promo-main-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  @media (min-resolution: 2dppx) {
+    .promo--main {
+      background-image: url("../img/promo-main-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .promo--main {
+      background-image: url("../img/promo-main-tablet.jpg"); } }
+  @media (max-width: 1023px) and (min-resolution: 2dppx) {
+    .promo--main {
+      background-image: url("../img/promo-main-tablet@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .promo--main {
+      padding-top: 189px;
+      padding-bottom: 188px;
+      background-image: url("../img/promo-main-mobile.jpg"); } }
+  @media (max-width: 767px) and (min-resolution: 2dppx) {
+    .promo--main {
+      background-image: url("../img/promo-main-mobile@2x.jpg"); } }
+
+.promo--catalog {
+  padding-top: 92px;
+  padding-bottom: 91px;
+  background-color: #a87b62;
+  background-image: url("../img/promo-catalog-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  @media (min-resolution: 2dppx) {
+    .promo--catalog {
+      background-image: url("../img/promo-catalog-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .promo--catalog {
+      background-image: url("../img/promo-catalog-tablet.jpg"); } }
+  @media (max-width: 1023px) and (min-resolution: 2dppx) {
+    .promo--catalog {
+      background-image: url("../img/promo-catalog-tablet@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .promo--catalog {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      background-image: url("../img/promo-catalog-mobile.jpg"); } }
+  @media (max-width: 767px) and (min-resolution: 2dppx) {
+    .promo--catalog {
+      background-image: url("../img/promo-catalog-mobile@2x.jpg"); } }
+
+.promo__inner--main {
+  width: 285px;
+  margin: 0 auto;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .promo__inner--main {
+      width: 304px;
+      text-align: start; } }
+  @media (max-width: 767px) {
+    .promo__inner--main {
+      width: 240px;
+      text-align: center; } }
+
+.promo__inner--catalog {
+  width: 488px;
+  margin: 0 auto;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .promo__inner--catalog {
+      width: 248px; } }
+
+.promo__inner--main h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  color: #ffffff;
+  letter-spacing: 0.03em; }
+  @media (max-width: 767px) {
+    .promo__inner--main h2 {
+      font-size: 38px;
+      line-height: 49px; } }
+
+.promo__inner--catalog h2 {
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: #ffffff; }
+
+.promo__inner--main p {
+  margin: 0;
+  margin-top: -8px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  color: #ffffff; }
+  @media (max-width: 1023px) {
+    .promo__inner--main p {
+      padding-left: 30px;
+      margin-top: -7px; } }
+  @media (max-width: 767px) {
+    .promo__inner--main p {
+      font-size: 34px;
+      line-height: 44px;
+      padding-left: 0; } }
+
+.promo__inner--catalog p {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  color: #ffffff; }
+  @media (max-width: 767px) {
+    .promo__inner--catalog p {
+      line-height: 26px; } }
