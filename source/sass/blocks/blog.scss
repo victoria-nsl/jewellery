@@ -1,0 +1,328 @@
+.blog {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 80px;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 70px;
+    padding: 0 4.7%;
+  }
+}
+
+.blog h2 {
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  color: $black-text;
+  text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.blog__link {
+  position: relative;
+
+  display: block;
+  width: 66px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black-text;
+
+  text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.blog__link::before {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  content: "";
+
+  width: 100%;
+  height: 1px;
+
+  background-color: $brown;
+}
+
+.blog__list {
+  @include reset-style-list;
+
+  display: grid;
+  grid-template-columns: 48.8% 48.8%;
+  grid-template-rows: auto auto;
+  column-gap: 2.4%;
+  row-gap: 30px;
+
+  width: 100%;
+
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
+//Большая карточка на десктопе
+.blog__item--trends {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: calc(50% + 15px) calc(50% - 15px);
+
+  @media (max-width: $tablet-max-width) {
+    order: 3;
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.blog__img-block--trends {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @media (max-width: $tablet-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.blog__text-block--trends {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @media (max-width: $tablet-max-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+//маленкие карточки на десктопе
+.blog__item--care-jewellery,
+.blog__item--power-crystals {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
+  }
+}
+
+.blog__img-block--care-jewellery {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.blog__text-block--care-jewellery {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.blog__img-block--power-crystals {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.blog__text-block--power-crystals {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+//стили для текстовых блоков
+.blog__text-block {
+  padding: 67px 21.4% 10px 21.4%;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: $brown-light;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 66px 26% 10px 26%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 45px 21.7% 10px 21.7%;
+  }
+}
+
+.blog__item--trends .blog__text-block {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 85px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 60px;
+  }
+}
+
+.blog__text-block time {
+  display: block;
+  margin-bottom: 13px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $grey;
+}
+
+.blog__text-block h3 {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  color: $black;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.blog__link-article {
+  position: relative;
+
+  display: block;
+  width: 97px;
+  margin: 0 auto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black-text;
+}
+
+.blog__link-article::before {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  content: "";
+
+  width: 100%;
+  height: 1px;
+
+  background-color: $brown;
+}
+
+//стили для изображений
+.blog__img-block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.blog__link:hover,
+.blog__link-article:hover {
+  color: $brown-dark;
+}
+
+//focus
+.blog__link:focus,
+.blog__link-article:focus {
+  outline: 2px solid $brown-dark;
+}
+
+//active
+.blog__link:active,
+.blog__link-article:active {
+  opacity: 0.4;
+  outline: none;
+}

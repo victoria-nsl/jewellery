@@ -24,7 +24,7 @@
 
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 34px;
   line-height: 44px;
   letter-spacing: 0.02em;
@@ -38,7 +38,7 @@
 .instagram span {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 42px;
   line-height: 55px;
   letter-spacing: 0.02em;
@@ -140,10 +140,6 @@
 //hover
 .instagram__link:hover {
   color: $brown-dark;
-}
-
-.instagram__link:hover::before {
-  background-color: $brown-dark;
 }
 
 //focus
