@@ -104,6 +104,7 @@
   line-height: 58px;
   color: $white;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 
   @media (max-width: $mobile-max-width) {
     font-size: 38px;
@@ -121,6 +122,7 @@
   font-size: 34px;
   line-height: 44px;
   color: $white;
+  text-transform: uppercase;
 }
 
 .promo__inner--main p {
