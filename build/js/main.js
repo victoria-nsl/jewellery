@@ -30,7 +30,7 @@ if (menu) {
 }
 
 /*================АККОРДЕОН==========================================*/
-const changeContentDisplay = (item) => {
+const toggleContentVisibility = (item) => {
   if (item.classList.contains('accordion__item--active')) {
     item.classList.remove('accordion__item--active');
     item.classList.add('accordion__item--closed');
@@ -49,7 +49,7 @@ if (itemsAccordionFaq) {
   triggersFaq.forEach((triggerFaq, index) => {
     triggerFaq.addEventListener('click', () => {
       const itemAccordionCurrent = itemsAccordionFaq[index];
-      changeContentDisplay(itemAccordionCurrent);
+      toggleContentVisibility(itemAccordionCurrent);
     });
   });
 }

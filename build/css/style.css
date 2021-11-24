@@ -284,7 +284,8 @@ img {
   line-height: 21px;
   color: #1d1613;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  transition-duration: 0.3s; }
   .page-header__form input::placeholder {
     color: #9b9997; }
   @media (max-width: 1023px) {
@@ -662,7 +663,8 @@ img {
   line-height: 21px;
   color: #ffffff;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  transition-duration: 0.3s; }
   .page-footer__form input::placeholder {
     color: #9b9997; }
   @media (max-width: 767px) {
@@ -1331,7 +1333,8 @@ img {
   color: #1d1613;
   border: none;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  transition-duration: 0.2s; }
   @media (max-width: 1023px) {
     .faq__button {
       padding: 44px 44px 43px 50px; } }

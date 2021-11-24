@@ -106,6 +106,8 @@
   border: none;
   background-color: transparent;
 
+  transition-duration: 0.2s;
+
   &::placeholder {
     color: $grey;
   }
