@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     padding: 0 4.7%;
   }
 }
@@ -52,7 +52,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding: 44px;
+  padding: 44px 44px 43px 44px;
   box-sizing: border-box;
 
   font-family: inherit;
@@ -67,27 +67,36 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    padding: 44px 44px 44px 50px;
+    padding: 44px 44px 43px 50px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 18px 50px 20px 25px;
+    padding: 18px 50px 19px 25px;
 
     font-size: 16px;
     line-height: 22px;
   }
 }
 
+.faq__button br {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
 .faq__content {
   width: 527px;
-  padding: 0 0 42px 50px;
+  padding: 0 0 40px 50px;
 
   @media (max-width: $tablet-max-width) {
     width: 79%;
+    padding: 0 0 44px 50px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 0 0 18px 25px;
+    padding: 0 0 20px 25px;
     width: 72%;
   }
 }
@@ -104,4 +113,22 @@
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.faq__button:hover {
+  color: $brown-dark;
+  background-color: $brown-light;
+}
+
+//focus
+.faq__button:focus {
+  outline: 2px solid $brown-dark;
+}
+
+//active
+.faq__button:active {
+  opacity: 0.4;
+  outline: none;
 }
