@@ -1259,27 +1259,36 @@ img {
   text-align: start;
   color: #1d1613;
   border: none;
+  background-color: transparent;
   cursor: pointer; }
+  @media (max-width: 1023px) {
+    .faq__button {
+      padding: 44px 44px 44px 50px; } }
   @media (max-width: 767px) {
     .faq__button {
-      padding: 25px 50px 25px 25px;
+      padding: 18px 50px 20px 25px;
       font-size: 16px;
       line-height: 22px; } }
 
 .faq__content {
   width: 527px;
-  padding: 0 0 42px 50px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: #1d1613; }
+  padding: 0 0 42px 50px; }
   @media (max-width: 1023px) {
     .faq__content {
       width: 79%; } }
   @media (max-width: 767px) {
     .faq__content {
-      padding: 0 0 25px 25px;
-      width: 72%;
+      padding: 0 0 18px 25px;
+      width: 72%; } }
+
+.faq__content p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1d1613; }
+  @media (max-width: 767px) {
+    .faq__content p {
       font-size: 14px;
       line-height: 20px; } }
 
