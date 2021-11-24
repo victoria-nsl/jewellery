@@ -1,0 +1,96 @@
+.faq {
+  width: 970px;
+  margin: 0 auto;
+  margin-bottom: 108px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 70px;
+    padding: 0 4.7%;
+  }
+}
+
+.faq h2 {
+  width: 388px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: $black-text;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $mobile-max-width) {
+    width: 83.9%;
+    margin-bottom: 27px;
+    text-align: center;
+  }
+}
+
+.faq__list {
+  @include reset-style-list;
+
+  border-top: 1px solid $brown;
+}
+
+.faq__item {
+  border: 1px solid $brown;
+  border-top: none;
+}
+
+.faq__button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 44px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: start;
+
+
+  color: $black-text;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 25px 50px 25px 25px;
+
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.faq__content {
+  width: 527px;
+  padding: 0 0 42px 50px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black-text;
+
+  @media (max-width: $tablet-max-width) {
+    width: 79%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 0 25px 25px;
+    width: 72%;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

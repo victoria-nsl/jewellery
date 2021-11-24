@@ -18,8 +18,8 @@
 
 <body>
   <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
-    page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
-    page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
+  page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
+  page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
   <header class="page-header page-header--closed page-header--nojs">
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -169,6 +169,49 @@
             <time datetime="2019-09-23">September 23, 2019</time>
             <h3>Power of crystals</h3>
             <a class="blog__link-article" href="#">Read Article</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+      <!-- accordion__item--nojs - содержимое вкладки открыто при отключенном js, значка у вкладки нет
+      accordion__item--closed - содержимое вкладки закрыто, значок у вкладки /стрелка вниз/
+      accordion__item--active - содержимое вкладки открыто, значок у вкладки /cтрелка вверх/-->
+      <ul class="faq__list accordion">
+        <li class="faq__item accordion__item accordion__item--closed accordion__item--nojs">
+          <button class="faq__button accordion__button accordion__button--faq" type="button">
+            What materials are the&nbsp;jewellery made of?
+          </button>
+          <div class="faq__content accordion__content">
+            <span>
+              Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.
+            </span>
+          </div>
+        </li>
+        <li class="faq__item accordion__item accordion__item--closed accordion__item--nojs">
+          <button class="faq__button accordion__button accordion__button--faq" type="button">
+            Which countries do&nbsp;you&nbsp;deliver to?
+          </button>
+          <div class="faq__content accordion__content">
+            Belgium, Germany, Ireland, Italy, Luxembourg, Netherlands, Portugal, Sweden
+          </div>
+        </li>
+        <li class="faq__item accordion__item accordion__item--closed accordion__item--nojs">
+          <button class="faq__button accordion__button accordion__button--faq" type="button">
+            What are the payment&nbsp;methods?
+          </button>
+          <div class="faq__content accordion__content">
+            Visa, Mastercard, American Express, iDeal, Sofot
+          </div>
+        </li>
+        <li class="faq__item accordion__item accordion__item--closed accordion__item--nojs">
+          <button class="faq__button accordion__button accordion__button--faq" type="button">
+            Can I return the jewellery&nbsp;if it didn’t fit me?
+          </button>
+          <div class="faq__content accordion__content">
+            If for any reason you're not completely satisfied with your jewelry purchase, you can return it to us within 90 days of receiving your purchase.
           </div>
         </li>
       </ul>

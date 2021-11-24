@@ -1,0 +1,52 @@
+.accordion__item--closed .accordion__content {
+  display: none;
+}
+
+.accordion__item--nojs .accordion__content {
+  display: block;
+}
+
+.accordion__item--active .accordion__content {
+  display: block;
+}
+
+.accordion__button {
+  position: relative;
+}
+
+.accordion__item--closed .accordion__button::after,
+.accordion__item--active .accordion__button::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 1px;
+
+  background-color: $grey;
+}
+
+.accordion__item--closed .accordion__button::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg);
+
+  width: 16px;
+  height: 1px;
+
+  background-color: $grey;
+}
+
+.accordion__item--nojs .accordion__button::before {
+  display: none;
+}
+
+.accordion__item--nojs .accordion__button::after {
+  display: none;
+}
