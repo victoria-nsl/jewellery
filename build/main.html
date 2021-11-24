@@ -104,13 +104,21 @@
 
     <section class="new">
       <h2>New In</h2>
-      <a class="new__link" href="#">Shop Now</a>
+      <a class="new__link" href="catalog.html" aria-label="Перейти на страницу каталога">Shop Now</a>
       <div class="new__slider swiper-conteiner">
-        <button class="new__button swiper-button-prev"></button>
-        <button class="new__button swiper-button-next"></button>
+        <button class="new__button new__button--prev swiper-button-prev">
+          <svg role="img" width="29" height="9" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="new__button new__button--next swiper-button-next">
+          <svg role="img" width="29" height="9" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
         <ul class="new__list swiper-wrapper">
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x">
@@ -123,7 +131,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x">
@@ -136,7 +144,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x">
@@ -149,7 +157,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-4-mobile.webp 1x, img/slider-4-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-4-tablet.webp 1x, img/slider-4-tablet@2x.webp 2x">
@@ -162,7 +170,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x">
@@ -175,7 +183,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x">
@@ -188,7 +196,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x">
@@ -201,7 +209,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-4-mobile.webp 1x, img/slider-4-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-4-tablet.webp 1x, img/slider-4-tablet@2x.webp 2x">
@@ -214,7 +222,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x">
@@ -227,7 +235,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x">
@@ -240,7 +248,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x">
@@ -253,7 +261,7 @@
             </a>
           </li>
           <li class="new__item swiper-slide">
-            <a class="new__link" href="#" aria-label="Перейти на страницу товара">
+            <a class="new__link-slide" href="#" aria-label="Перейти на страницу товара">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/slider-4-mobile.webp 1x, img/slider-4-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/slider-4-tablet.webp 1x, img/slider-4-tablet@2x.webp 2x">
@@ -272,7 +280,7 @@
 
     <section class="blog">
       <h2>Blog</h2>
-      <a class="blog__link" href="#">Read All</a>
+      <a class="blog__link" href="#" aria-label="Читать все блоги">Read All</a>
       <ul class="blog__list">
         <li class="blog__item blog__item--care-jewellery">
           <div class="blog__img-block blog__img-block--care-jewellery">
@@ -376,7 +384,7 @@
 
     <section class="instagram">
       <h2><span>@</span>Chjewellery</h2>
-      <a class="instagram__link" href="#">Follow Us</a>
+      <a class="instagram__link" href="#" aria-label="Перейти на страницу компании в Инстаграм">Follow Us</a>
       <ul class="instagram__list">
         <li class="instagram__item instagram__item--medium-photo">
           <picture>

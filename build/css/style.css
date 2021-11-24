@@ -285,7 +285,7 @@ img {
   color: #1d1613;
   border: none;
   background-color: transparent;
-  transition-duration: 0.3s; }
+  transition-duration: 0.2s; }
   .page-header__form input::placeholder {
     color: #9b9997; }
   @media (max-width: 1023px) {
@@ -664,7 +664,7 @@ img {
   color: #ffffff;
   border: none;
   background-color: transparent;
-  transition-duration: 0.3s; }
+  transition-duration: 0.2s; }
   .page-footer__form input::placeholder {
     color: #9b9997; }
   @media (max-width: 767px) {
@@ -833,6 +833,7 @@ img {
   outline: none; }
 
 .promo--main {
+  margin-bottom: 122px;
   padding-top: 182px;
   padding-bottom: 181px;
   background-color: #a87b62;
@@ -845,12 +846,14 @@ img {
       background-image: url("../img/promo-main-desktop@2x.jpg"); } }
   @media (max-width: 1023px) {
     .promo--main {
+      margin-bottom: 70px;
       background-image: url("../img/promo-main-tablet.jpg"); } }
   @media (max-width: 1023px) and (min-resolution: 2dppx) {
     .promo--main {
       background-image: url("../img/promo-main-tablet@2x.jpg"); } }
   @media (max-width: 767px) {
     .promo--main {
+      margin-bottom: 60px;
       padding-top: 189px;
       padding-bottom: 188px;
       background-image: url("../img/promo-main-mobile.jpg"); } }
@@ -1036,6 +1039,148 @@ img {
 
 .accordion__item--nojs .accordion__button::after {
   display: none; }
+
+.new {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  padding: 0 30px;
+  box-sizing: border-box; }
+  @media (max-width: 1023px) {
+    .new {
+      margin-bottom: 70px;
+      padding: 0 45px; } }
+  @media (max-width: 767px) {
+    .new {
+      margin-bottom: 60px;
+      padding: 0 4.7%; } }
+
+.new h2 {
+  width: 106px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: #1d1613;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .new h2 {
+      margin-bottom: 20px; } }
+
+.new__link {
+  position: relative;
+  display: block;
+  width: 82px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1d1613;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .new__link {
+      margin-bottom: 44px; } }
+
+.new__link::before {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #a87b62; }
+  @media (max-width: 1023px) {
+    .new__link::before {
+      bottom: -4px; } }
+
+.new__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  @media (max-width: 767px) {
+    .new__button {
+      display: none; } }
+
+.new__button svg {
+  width: 29px;
+  height: 9px;
+  stroke: #a87b62; }
+  @media (max-width: 1023px) {
+    .new__button svg {
+      width: 36px;
+      height: 15px; } }
+
+.new__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.new__item {
+  width: 23%;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .new__item {
+      width: 47.8%; } }
+  @media (max-width: 767px) {
+    .new__item {
+      width: 44.8%; } }
+
+.new__link-slide {
+  display: block;
+  color: #1d1613; }
+
+.new__link-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 23px;
+  object-fit: cover; }
+  @media (max-width: 767px) {
+    .new__link-slide img {
+      margin-bottom: 16px; } }
+
+.new__link-slide h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px; }
+
+.new__link-slide p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px; }
+
+/*=============СТАЙЛГАЙД============*/
+.new__link-slide:hover {
+  outline: 1px solid #9b9997; }
+
+.new__link:hover {
+  color: #6b3906; }
+
+.new__button--prev:hover svg,
+.new__button--next:hover svg {
+  stroke: #6b3906; }
+
+.new__link:focus,
+.new__link-slide:focus,
+.new__button--next:focus,
+.new__button--prev:focus {
+  outline: 2px solid #6b3906; }
+
+.new__link:active,
+.new__link-slide:active,
+.new__button--next:active,
+.new__button--prev:active {
+  opacity: 0.4;
+  outline: none; }
 
 .blog {
   max-width: 1230px;

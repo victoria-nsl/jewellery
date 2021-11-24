@@ -1,4 +1,5 @@
 .promo--main {
+  margin-bottom: 122px;
   padding-top: 182px;
   padding-bottom: 181px;
 
@@ -14,6 +15,8 @@
 
 
   @media (max-width: $tablet-max-width) {
+    margin-bottom: 70px;
+
     background-image: url("../img/promo-main-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -22,8 +25,10 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    margin-bottom: 60px;
     padding-top: 189px;
     padding-bottom: 188px;
+
     background-image: url("../img/promo-main-mobile.jpg");
 
     @media (min-resolution: 2dppx) {
