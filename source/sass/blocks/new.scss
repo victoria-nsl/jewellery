@@ -1,8 +1,10 @@
 .new {
+  position: relative;
+
   max-width: 1230px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 120px;
+  margin-bottom: 114px;
   padding: 0 30px;
   box-sizing: border-box;
 
@@ -73,7 +75,22 @@
 }
 
 //Cлайдер
+
+.new__slider {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
 .new__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 11px;
+  padding: 0;
+
+
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -83,9 +100,21 @@
   }
 }
 
+.new__button--prev {
+  position: absolute;
+  left: 30px;
+  top: 43px;
+}
+
+.new__button--next {
+  position: absolute;
+  right: 30px;
+  top: 43px;
+}
+
 .new__button svg {
-  width: 29px;
-  height: 9px;
+  width: 30px;
+  height: 11px;
 
   stroke: $brown;
 
@@ -97,12 +126,16 @@
 
 .new__list {
   @include reset-style-list;
+  margin-bottom: 52px;
 }
 
 .new__item {
   width: 23%;
 
   text-align: center;
+  outline: 5px solid rgba(0, 255, 0, 0.5);
+  outline-offset: -5px;
+  pointer-events: none;
 
   @media (max-width: $tablet-max-width) {
     width: 47.8%;
@@ -148,6 +181,33 @@
   font-size: 14px;
   line-height: 18px;
 }
+
+.new__pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.new__pagination .swiper-pagination-bullet {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $grey;
+
+  cursor: pointer;
+}
+
+.new__pagination .swiper-pagination-bullet-active {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black-text;
+
+  cursor: default;
+}
+
+
 
 /*=============СТАЙЛГАЙД============*/
 //hover
