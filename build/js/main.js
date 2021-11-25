@@ -61,6 +61,7 @@ new Swiper (slider, {
   spaceBetween: 30,
   simulateTouch: false,
   loop: true,
+  grabCursor: true,
 
   navigation: {
     nextEl: '.swiper-button-next',

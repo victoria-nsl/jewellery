@@ -2,14 +2,13 @@
   position: relative;
 
   max-width: 1230px;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   margin-bottom: 114px;
   padding: 0 30px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-max-width) {
-    width: 100vw;
     margin-bottom: 65px;
     padding: 0 45px;
   }
@@ -143,6 +142,7 @@
 
 .new__list {
   @include reset-style-list;
+  padding-top: 5px;
   margin-bottom: 52px;
 
   @media (max-width: $tablet-max-width) {
