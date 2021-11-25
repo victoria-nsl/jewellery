@@ -97,3 +97,21 @@
 .accordion__item--nojs .accordion__button::after {
   display: none;
 }
+
+
+/*=============СТАЙЛГАЙД ДЛЯ СТРЕЛОК============*/
+
+//для раздела FAQ
+//hover
+.accordion__button--faq:hover::after,
+.accordion__button--faq:hover::before {
+  border-left: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+//focus
+.accordion__button--faq:focus::after,
+.accordion__button--faq:focus::before {
+  border-left: 1px solid $brown-dark;
+  border-bottom: 1px solid $brown-dark;
+}

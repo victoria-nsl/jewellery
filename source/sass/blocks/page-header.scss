@@ -2,13 +2,13 @@
   position: relative;
 
   @media (max-width: $tablet-max-width) {
-    padding-top: 55px;
+    padding-top: 49px;
 
     background-color: $brown;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding-top: 38px;
+    padding-top: 32px;
   }
 }
 
@@ -20,13 +20,13 @@
 
 .page-header--nojs {
   @media (max-width: $tablet-max-width) {
-    padding-top: 126px;
+    padding-top: 122px;
 
     background-color: $brown;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding-top: 92px;
+    padding-top: 89px;
   }
 }
 
@@ -49,8 +49,8 @@
   position: relative;
 
   display: none;
-  width: 25px;
-  height: 16px;
+  width: 35px;
+  height: 25px;
   padding: 0;
 
   border: none;
@@ -60,13 +60,13 @@
 
   @media (max-width: $tablet-max-width) {
     display: block;
-    margin-bottom: 55px;
-    margin-left: 45px;
+    margin-bottom: 52px;
+    margin-left: 40px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 38px;
-    margin-left: 4.7%;
+    margin-bottom: 35px;
+    margin-left: 3.5%;
   }
 }
 
@@ -78,11 +78,11 @@
 
 .page-header--opened .page-header__toggle {
   @media (max-width: $tablet-max-width) {
-    margin-bottom: 150px;
+    margin-bottom: 144px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 124px;
+    margin-bottom: 115px;
   }
 }
 
@@ -363,15 +363,20 @@
 .page-header__link-navigation-user--cart {
   @media (max-width: $tablet-max-width) {
     position: absolute;
-    top: 55px;
-    right: 45px;
+    top: 53px;
+    right: 43px;
 
-    display: block;
+    width: 22px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (max-width: $mobile-max-width) {
-    top: 38px;
-    right: 4.7%;
+    top: 36px;
+    right: 4%;
   }
 }
 
@@ -473,6 +478,7 @@
     flex-direction: column;
     width: 100%;
     padding-left: 0;
+    padding-top: 5px;
     margin: 0;
     margin-bottom: 40px;
   }
@@ -578,7 +584,7 @@
 .page-header__item-navigation-jewellery a:focus,
 .page-header__item-navigation-company a:focus,
 .page-header__link-navigation-user--login:focus,
-.page-header__link-navigation-user--cart:focus svg,
+.page-header__link-navigation-user--cart:focus,
 .page-header__link-navigation-user--cart:focus p,
 .page-header__form input:focus,
 .page-header__toggle:focus,
