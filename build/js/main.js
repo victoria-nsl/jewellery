@@ -97,7 +97,7 @@ new Swiper (slider, {
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
           return `<span class="${ currentClass  }"></span>`
-           + 'of' +
+          + 'of' +
           `<span class="${ totalClass  }"></span>`;
         },
       },
