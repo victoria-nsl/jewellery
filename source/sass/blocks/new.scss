@@ -9,12 +9,14 @@
   box-sizing: border-box;
 
   @media (max-width: $tablet-max-width) {
-    margin-bottom: 70px;
+    max-width: 768px;
+    margin-bottom: 65px;
     padding: 0 45px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 60px;
+    max-width: 320px;
+    margin-bottom: 56px;
     padding: 0 4.7%;
   }
 }
@@ -52,6 +54,10 @@
 
   text-align: center;
 
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 55px;
+  }
+
   @media (max-width: $mobile-max-width) {
     margin-bottom: 44px;
   }
@@ -75,11 +81,11 @@
 }
 
 //Cлайдер
-
 .new__slider {
   width: 100%;
-  overflow: hidden;
   height: auto;
+
+  overflow: hidden;
 }
 
 .new__button {
@@ -90,10 +96,14 @@
   height: 11px;
   padding: 0;
 
-
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    width: 36px;
+    height: 15px;
+  }
 
   @media (max-width: $mobile-max-width) {
     display: none;
@@ -104,12 +114,20 @@
   position: absolute;
   left: 30px;
   top: 43px;
+
+  @media (max-width: $tablet-max-width) {
+    left: 45px;
+  }
 }
 
 .new__button--next {
   position: absolute;
   right: 30px;
   top: 43px;
+
+  @media (max-width: $tablet-max-width) {
+    right: 45px;
+  }
 }
 
 .new__button svg {
@@ -127,22 +145,30 @@
 .new__list {
   @include reset-style-list;
   margin-bottom: 52px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 43px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .new__item {
   width: 23%;
 
   text-align: center;
-  outline: 5px solid rgba(0, 255, 0, 0.5);
-  outline-offset: -5px;
   pointer-events: none;
 
   @media (max-width: $tablet-max-width) {
     width: 47.8%;
+    min-height: 402px;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 44.8%;
+    min-height: 214px;
   }
 }
 
@@ -160,6 +186,10 @@
 
   object-fit: cover;
 
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+
   @media (max-width: $mobile-max-width) {
     margin-bottom: 16px;
   }
@@ -172,8 +202,18 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+  text-align: center;
 }
 
+.new__item:nth-child(4n-1) h3 {
+  @media (max-width: $tablet-max-width) {
+    margin-left: 13px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
+}
 .new__link-slide p {
   margin: 0;
 
@@ -187,27 +227,34 @@
   justify-content: space-between;
   width: 50px;
   margin: 0 auto;
-}
 
-.new__pagination .swiper-pagination-bullet {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: $grey;
-
-  cursor: pointer;
-}
-
-.new__pagination .swiper-pagination-bullet-active {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: $black-text;
 
-  cursor: default;
+  @media (max-width: $tablet-max-width) {
+    width: 118px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 50px;
+
+    text-align: center;
+  }
 }
 
+.swiper-pagination-bullet {
+  color: $grey;
 
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  color: $black-text;
+
+  cursor: default;
+}
 
 /*=============СТАЙЛГАЙД============*/
 //hover

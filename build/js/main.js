@@ -87,9 +87,20 @@ new Swiper (slider, {
       slidesPerGroup: 2,
     },
 
-    '320': {
+    '0': {
       slidesPerView: 2,
       slidesPerGroup: 2,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return `<span class="${ currentClass  }"></span>`
+           + 'of' +
+          `<span class="${ totalClass  }"></span>`;
+        },
+      },
     },
   },
 });
