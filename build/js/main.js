@@ -57,51 +57,55 @@ if (itemsAccordionFaq) {
 }
 
 /*================СЛАЙДЕР==========================================*/
-new Swiper (slider, {
-  spaceBetween: 30,
-  simulateTouch: false,
-  loop: true,
-  grabCursor: true,
+if (slider) {
+  slider.classList.remove('new__slider--no-js');
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  new Swiper (slider, {
+    spaceBetween: 30,
+    simulateTouch: false,
+    loop: true,
+    grabCursor: true,
 
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">${index + 1}</span>`;
-    },
-  },
-
-  breakpoints: {
-    '1024': {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
-    '768': {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${index + 1}</span>`;
+      },
     },
 
-    '0': {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+    breakpoints: {
+      '1024': {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
 
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'fraction',
-        renderFraction: function (currentClass, totalClass) {
-          return `<span class="${ currentClass  }"></span>`
+      '768': {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+
+      '0': {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return `<span class="${ currentClass  }"></span>`
           + 'of' +
           `<span class="${ totalClass  }"></span>`;
+          },
         },
       },
     },
-  },
-});
+  });
+}
