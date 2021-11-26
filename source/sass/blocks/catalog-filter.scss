@@ -11,24 +11,33 @@
   }
 }
 
+.catalog-filter__form {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
 .catalog-filter__button {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
+  text-align: center;
+
+  background-color: $brown;
+}
+
+.catalog-filter__button--filter {
   display: none;
 
   @media (max-width: $tablet-max-width) {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     width: 100%;
     padding: 24px;
-    box-sizing: border-box;
-
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    color: $white;
-    text-align: center;
-
-    background-color: $brown;
   }
 }

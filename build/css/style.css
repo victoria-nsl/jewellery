@@ -1927,22 +1927,29 @@ img {
     .catalog-filter {
       margin-bottom: 40px; } }
 
+@media (max-width: 1023px) {
+  .catalog-filter__form {
+    display: none; } }
+
 .catalog-filter__button {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #a87b62; }
+
+.catalog-filter__button--filter {
   display: none; }
   @media (max-width: 1023px) {
-    .catalog-filter__button {
-      display: inline-block;
-      vertical-align: middle;
+    .catalog-filter__button--filter {
+      display: block;
       width: 100%;
-      padding: 24px;
-      box-sizing: border-box;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 21px;
-      color: #ffffff;
-      text-align: center;
-      background-color: #a87b62; } }
+      padding: 24px; } }
 
 .catalog-products {
   width: 74.3%; }
