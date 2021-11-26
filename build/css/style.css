@@ -2114,14 +2114,14 @@ img {
 
 /*=============СТАЙЛГАЙД============*/
 .catalog-navigation__button:hover,
-.catalog-navigation__pagination-item:not(catalog-navigation__pagination-item--active) a:hover {
+.catalog-navigation__pagination-item:not(.catalog-navigation__pagination-item--active) a:hover {
   color: #6b3906; }
 
 .catalog-navigation__button:focus,
-.catalog-navigation__pagination-item:not(catalog-navigation__pagination-item--active) a:focus {
+.catalog-navigation__pagination-item:not(.catalog-navigation__pagination-item--active) a:focus {
   outline: 2px solid #6b3906; }
 
 .catalog-navigation__button:active,
-.catalog-navigation__pagination-item:not(catalog-navigation__pagination-item--active) a:active {
+.catalog-navigation__pagination-item:not(.catalog-navigation__pagination-item--active) a:active {
   opacity: 0.4;
   outline: none; }

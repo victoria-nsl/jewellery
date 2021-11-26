@@ -60,11 +60,10 @@ if (itemsAccordionFaq) {
 if (slider) {
   slider.classList.remove('new__slider--no-js');
 
-  new window.Swiper (slider, {
+  const swiper = new window.Swiper (slider, {
     spaceBetween: 30,
     simulateTouch: false,
     loop: true,
-    grabCursor: true,
 
     navigation: {
       nextEl: '.swiper-button-next',
@@ -107,5 +106,10 @@ if (slider) {
         },
       },
     },
+  });
+
+  window.addEventListener('resize', () => {
+    swiper.pagination.render();
+    swiper.pagination.update();
   });
 }
