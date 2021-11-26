@@ -60,7 +60,7 @@ if (itemsAccordionFaq) {
 if (slider) {
   slider.classList.remove('new__slider--no-js');
 
-  new Swiper (slider, {
+  new window.Swiper (slider, {
     spaceBetween: 30,
     simulateTouch: false,
     loop: true,

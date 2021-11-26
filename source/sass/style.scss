@@ -8,6 +8,7 @@
 /*БЛОКИ*/
 @import "blocks/site-pages.scss";
 @import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/promo.scss";
 @import "blocks/page-no-scroll.scss";
@@ -17,3 +18,7 @@
 @import "blocks/blog.scss";
 @import "blocks/faq.scss";
 @import "blocks/instagram.scss";
+//Страница каталога
+@import "blocks/catalog-filter.scss";
+@import "blocks/catalog-products.scss";
+@import "blocks/catalog-navigation.scss";

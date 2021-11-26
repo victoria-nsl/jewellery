@@ -1,0 +1,18 @@
+.page-main__wrapper-catalog {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 4.7%;
+  }
+}

@@ -1,0 +1,34 @@
+.catalog-filter {
+  width: 21.4%;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog-filter__button {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $white;
+    text-align: center;
+
+    background-color: $brown;
+  }
+}
