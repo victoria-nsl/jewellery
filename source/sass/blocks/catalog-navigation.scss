@@ -44,6 +44,7 @@
 
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (max-width: $mobile-max-width) {
     display: none;

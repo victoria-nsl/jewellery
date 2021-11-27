@@ -89,6 +89,37 @@
   }
 }
 
+//Стрелки в разделе catalog-filter
+.accordion__item--active .accordion__button--filter::after {
+  content: "";
+
+  position: absolute;
+  top: 70%;
+  right: 26px;
+  transform: translateY(-50%) rotate(135deg);
+
+  width: 10px;
+  height: 10px;
+
+  border-left: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+}
+
+.accordion__item--closed .accordion__button--filter::before {
+  content: "";
+
+  position: absolute;
+  top: 45%;
+  right: 26px;
+  transform: translateY(-50%) rotate(-45deg);
+
+  width: 10px;
+  height: 10px;
+
+  border-left: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+}
+
 //Стрелки при отключенном js
 .accordion__item--nojs .accordion__button::before {
   display: none;
@@ -101,17 +132,21 @@
 
 /*=============СТАЙЛГАЙД ДЛЯ СТРЕЛОК============*/
 
-//для раздела FAQ
+//для раздела FAQ, для раздела catalog-filter
 //hover
 .accordion__button--faq:hover::after,
-.accordion__button--faq:hover::before {
+.accordion__button--faq:hover::before,
+.accordion__button--filter:hover::after,
+.accordion__button--filter:hover::before {
   border-left: 1px solid $black;
   border-bottom: 1px solid $black;
 }
 
 //focus
 .accordion__button--faq:focus::after,
-.accordion__button--faq:focus::before {
+.accordion__button--faq:focus::before,
+.accordion__button--filter:focus::after,
+.accordion__button--filter:focus::before {
   border-left: 1px solid $brown-dark;
   border-bottom: 1px solid $brown-dark;
 }

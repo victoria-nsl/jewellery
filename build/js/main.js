@@ -5,6 +5,9 @@ const navigationToggle = menu.querySelector('.page-header__toggle');
 const itemsAccordionFaq = document.querySelectorAll('.faq__item');
 const triggersFaq = document.querySelectorAll('.faq__button');
 
+const itemsAccordionFilter = document.querySelectorAll('.catalog-filter__fieldset');
+const triggersFilter = document.querySelectorAll('.catalog-filter__button--legend');
+
 const slider = document.querySelector('.swiper-conteiner');
 
 /*======ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ ============*/
@@ -51,6 +54,20 @@ if (itemsAccordionFaq) {
   triggersFaq.forEach((triggerFaq, index) => {
     triggerFaq.addEventListener('click', () => {
       const itemAccordionCurrent = itemsAccordionFaq[index];
+      toggleContentVisibility(itemAccordionCurrent);
+    });
+  });
+}
+
+//для раздела catalog-filter
+if (itemsAccordionFilter) {
+  itemsAccordionFilter.forEach ((itemAccordionFilter) => {
+    itemAccordionFilter.classList.remove('accordion__item--nojs');
+  });
+
+  triggersFilter.forEach((triggerFilter, index) => {
+    triggerFilter.addEventListener('click', () => {
+      const itemAccordionCurrent = itemsAccordionFilter[index];
       toggleContentVisibility(itemAccordionCurrent);
     });
   });
