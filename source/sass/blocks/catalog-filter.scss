@@ -1,4 +1,4 @@
-.catalog-filter {
+.catalog-filter--page-main {
   width: 21.4%;
 
   @media (max-width: $tablet-max-width) {
@@ -8,6 +8,16 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 40px;
+  }
+}
+
+.catalog-filter--page-filter {
+  width: 590px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    width: 57.5%;
   }
 }
 
@@ -50,6 +60,12 @@
   background-color: $white;
   border: none;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 34px 90px 34px 40px;
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 
 .catalog-filter__button--apply {
@@ -62,6 +78,12 @@
   border: 1px solid $brown;
   background-color: $brown;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    width: 82%;
+    margin-left: 9%;
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -74,9 +96,14 @@
   background-color: $white;
   border: 1px solid $brown;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    width: 82%;
+    margin-left: 9%;
+  }
 }
 
-.catalog-filter__form {
+.catalog-filter__form--page-main {
   @media (max-width: $tablet-max-width) {
     display: none;
   }
@@ -87,6 +114,10 @@
 
   border: 1px solid $brown;
   border-bottom: none;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog-filter__fieldset {
@@ -108,11 +139,19 @@
 .catalog-filter__list {
   @include reset-style-list;
 
-  padding: 11px 34px 20px 34px;
+  padding: 0 34px 20px 34px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 50px 22px 50px;
+  }
 }
 
 .catalog-filter__item {
   margin-bottom: 5px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .catalog-filter__label {
@@ -120,7 +159,7 @@
 
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 25px;
+  padding-left: 25px;
 
   font-weight: 500;
   font-size: 14px;
@@ -128,6 +167,13 @@
   color: $black-text;
 
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 27px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 input + .catalog-filter__label::before {
@@ -135,7 +181,7 @@ input + .catalog-filter__label::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -25px;
+  left: 0;
 
   width: 15px;
   height: 15px;
@@ -143,6 +189,11 @@ input + .catalog-filter__label::before {
   border: 1px solid $brown;
   background-color: $white;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 input:checked + .catalog-filter__label::after {
@@ -150,7 +201,7 @@ input:checked + .catalog-filter__label::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -25px;
+  left: 0;
 
   width: 15px;
   height: 15px;
@@ -158,18 +209,34 @@ input:checked + .catalog-filter__label::after {
   border: 1px solid $brown;
   background-color: $brown;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 //Ползунок
 .catalog-filter__cost-range {
-  padding: 18px 24px 22px 24px;
+  padding: 0 24px 20px 24px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 3px 88px 39px 50px;
+  }
 }
 
 .catalog-filter__range-controls {
   position: relative;
 
+  display: flex;
+  align-items: center;
   width: 100%;
-  margin-bottom: 17px;
+  min-height: 15px;
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-max-width) {
+    min-height: 18px;
+  }
 }
 
 .catalog-filter__scale {
@@ -179,17 +246,21 @@ input:checked + .catalog-filter__label::after {
 }
 
 .catalog-filter__bar {
-  width: 45%;
+  width: 52%;
   height: 1px;
   background-color: $brown;
-  margin-left: 30%;
+  margin-left: 26.5%;
+
+  @media (max-width: $tablet-max-width) {
+    width: 57.9%;
+    margin-left: 18%;
+  }
 }
 
 .catalog-filter__toggle {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
-  transform: translateY(-50%);
 
   width: 15px;
   height: 15px;
@@ -199,14 +270,29 @@ input:checked + .catalog-filter__label::after {
   border-radius: 50%;
 
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .catalog-filter__toggle--min {
-  left: 23%;
+  left: 26.5%;
+  transform: translateX(-50%);
+
+  @media (max-width: $tablet-max-width) {
+    left: 18%;
+  }
 }
 
 .catalog-filter__toggle--max {
-  left: 75%;
+  left: 78.5%;
+  transform: translateX(-50%);
+
+  @media (max-width: $tablet-max-width) {
+    left: 75.7%;
+  }
 }
 
 .catalog-filter__price-controls {
@@ -214,8 +300,12 @@ input:checked + .catalog-filter__label::after {
   justify-content: space-between;
   width: 75%;
   margin: 0 auto;
-}
 
+  @media (max-width: $tablet-max-width) {
+    margin: 0;
+    margin-left: 8%;
+  }
+}
 
 .catalog-filter__wrapper-input {
   position: relative;
@@ -226,6 +316,10 @@ input:checked + .catalog-filter__label::after {
   height: 10px;
   margin-left: 13px;
   text-align: start;
+
+  @media (max-width: $tablet-max-width) {
+    width: 40px;
+  }
 }
 
 .catalog-filter__wrapper-input::before {
@@ -240,6 +334,11 @@ input:checked + .catalog-filter__label::after {
   line-height: 18px;
   text-align: center;
   color: $black-text;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .catalog-filter__wrapper-input input {
@@ -257,6 +356,11 @@ input:checked + .catalog-filter__label::after {
   box-sizing: border-box;
   border: none;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 /*=============СТАЙЛГАЙД============*/
@@ -290,7 +394,6 @@ input:hover + .catalog-filter__label::before {
 .catalog-filter__toggle--min:hover,
 .catalog-filter__toggle--max:hover {
   background-color: $brown-dark;
-  transform: scale(1.1) translateY(-50%);
 }
 
 
@@ -313,7 +416,6 @@ input:focus + .catalog-filter__label::before,
 .catalog-filter__toggle--min:focus,
 .catalog-filter__toggle--max:focus {
   outline: 2px solid $brown-dark;
-  transform: scale(1) translateY(-50%);
 }
 
 //active

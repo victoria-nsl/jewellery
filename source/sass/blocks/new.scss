@@ -243,13 +243,13 @@
   }
 }
 
-.swiper-pagination-bullet {
+.new__slider .swiper-pagination-bullet {
   color: $grey;
 
   cursor: pointer;
 }
 
-.swiper-pagination-bullet-active {
+.new__slider .swiper-pagination-bullet-active {
   color: $black-text;
 
   cursor: default;
@@ -295,7 +295,8 @@
   box-shadow: inset 0 0 4px 0 rgba($brown, 0.4);
 }
 
-.new__link:hover {
+.new__link:hover,
+.new__slider .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
   color: $brown-dark;
 }
 
@@ -308,7 +309,8 @@
 .new__link:focus,
 .new__link-slide:focus,
 .new__button--next:focus,
-.new__button--prev:focus {
+.new__button--prev:focus,
+.new__slider .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):focus {
   outline: 2px solid $brown-dark;
 }
 
@@ -316,7 +318,8 @@
 .new__link:active,
 .new__link-slide:active,
 .new__button--next:active,
-.new__button--prev:active {
+.new__button--prev:active,
+.new__slider .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):active {
   opacity: 0.4;
   outline: none;
 }

@@ -16,11 +16,25 @@
   position: relative;
 }
 
-.accordion__item--active .accordion__button {
+//Корректировка нижнего отступа в разделе FAQ
+.accordion__item--active .accordion__button--faq {
   padding-bottom: 7px;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 12px;
+  }
+}
+
+//Корректировка нижнего отступа в разделе Filter
+.accordion__item--active .accordion__button--filter {
+  padding-bottom: 18px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 22px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -94,7 +108,7 @@
   content: "";
 
   position: absolute;
-  top: 70%;
+  top: 55%;
   right: 26px;
   transform: translateY(-50%) rotate(135deg);
 
@@ -103,6 +117,14 @@
 
   border-left: 1px solid $brown;
   border-bottom: 1px solid $brown;
+
+  @media (max-width: $tablet-max-width) {
+    top: 65%;
+    right: 42px;
+
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .accordion__item--closed .accordion__button--filter::before {
@@ -118,6 +140,15 @@
 
   border-left: 1px solid $brown;
   border-bottom: 1px solid $brown;
+
+
+  @media (max-width: $tablet-max-width) {
+    top: 45%;
+    right: 42px;
+
+    width: 16px;
+    height: 16px;
+  }
 }
 
 //Стрелки при отключенном js

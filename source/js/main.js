@@ -1,6 +1,6 @@
 const page = document.body;
-const menu = document.querySelector('.page-header');
-const navigationToggle = menu.querySelector('.page-header__toggle');
+const menu = document.querySelector('[data-header]');
+const navigationToggle =  document.querySelector('.page-header__toggle');
 
 const itemsAccordionFaq = document.querySelectorAll('.faq__item');
 const triggersFaq = document.querySelectorAll('.faq__button');

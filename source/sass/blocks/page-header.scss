@@ -551,6 +551,30 @@
   }
 }
 
+
+//Шапка для страницы Фильтр
+.page-header--filter {
+  position: static;
+
+  height: 115px;
+
+  @media (max-width: $tablet-max-width) {
+    height: 126px;
+    padding-top: 0;
+
+    background-color: $white;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    height: 90px;
+  }
+}
+
+.page-header__logo-link--filter svg {
+  fill: $brown;
+}
+
+
 /*=============СТАЙЛГАЙД============*/
 //hover
 .page-header__item-navigation-jewellery a:hover,
@@ -572,7 +596,8 @@
   box-shadow: 0 8px 0 0 $brown-dark, 0 -8px 0 0 $brown-dark;
 }
 
-.page-header__logo-link[href]:hover svg {
+.page-header__logo-link[href]:hover svg,
+.page-header__logo-link--filter:hover svg {
   fill: $brown-dark;
 }
 
