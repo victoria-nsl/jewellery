@@ -1157,7 +1157,7 @@ img {
       padding-bottom: 22px; } }
   @media (max-width: 767px) {
     .accordion__item--active .accordion__button--filter {
-      padding-bottom: 12px; } }
+      padding-bottom: 21px; } }
 
 .accordion__item--active .accordion__button--faq::after {
   content: "";
@@ -1219,6 +1219,12 @@ img {
       right: 42px;
       width: 16px;
       height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__button--filter::after {
+      top: 60%;
+      right: 23px;
+      width: 14px;
+      height: 14px; } }
 
 .accordion__item--closed .accordion__button--filter::before {
   content: "";
@@ -1236,6 +1242,12 @@ img {
       right: 42px;
       width: 16px;
       height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--closed .accordion__button--filter::before {
+      top: 45%;
+      right: 23px;
+      width: 14px;
+      height: 14px; } }
 
 .accordion__item--nojs .accordion__button::before {
   display: none; }
@@ -1999,7 +2011,13 @@ img {
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .catalog-filter--page-filter {
-      width: 57.5%; } }
+      padding: 40px 0;
+      width: 57.5%;
+      margin: 0; } }
+  @media (max-width: 767px) {
+    .catalog-filter--page-filter {
+      width: 84.3%;
+      margin: 0 auto; } }
 
 .catalog-filter__button {
   display: inline-block;
@@ -2036,6 +2054,9 @@ img {
       padding: 34px 90px 34px 40px;
       font-size: 18px;
       line-height: 23px; } }
+  @media (max-width: 767px) {
+    .catalog-filter__button--legend {
+      padding: 24px 40px 24px 20px; } }
 
 .catalog-filter__button--apply {
   width: 100%;
@@ -2050,6 +2071,11 @@ img {
       width: 82%;
       margin-left: 9%;
       margin-bottom: 24px; } }
+  @media (max-width: 767px) {
+    .catalog-filter__button--apply {
+      width: 85.2%;
+      margin-left: 7.4%;
+      margin-bottom: 18px; } }
 
 .catalog-filter__button--clear {
   width: 100%;
@@ -2062,6 +2088,19 @@ img {
     .catalog-filter__button--clear {
       width: 82%;
       margin-left: 9%; } }
+  @media (max-width: 767px) {
+    .catalog-filter__button--clear {
+      width: 85.2%;
+      margin-left: 7.4%; } }
+
+@media (max-width: 1023px) {
+  .catalog-filter__form {
+    padding-bottom: 40px;
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24); } }
+
+@media (max-width: 767px) {
+  .catalog-filter__form {
+    padding-bottom: 30px; } }
 
 @media (max-width: 1023px) {
   .catalog-filter__form--page-main {
@@ -2073,7 +2112,11 @@ img {
   border-bottom: none; }
   @media (max-width: 1023px) {
     .catalog-filter__wrapper-fieldset {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      border: none; } }
+  @media (max-width: 767px) {
+    .catalog-filter__wrapper-fieldset {
+      margin-bottom: 30px; } }
 
 .catalog-filter__fieldset {
   width: 100%;
@@ -2097,6 +2140,9 @@ img {
   @media (max-width: 1023px) {
     .catalog-filter__list {
       padding: 0 50px 22px 50px; } }
+  @media (max-width: 767px) {
+    .catalog-filter__list {
+      padding: 0 30px 12px 30px; } }
 
 .catalog-filter__item {
   margin-bottom: 5px; }
@@ -2157,6 +2203,9 @@ input:checked + .catalog-filter__label::after {
   @media (max-width: 1023px) {
     .catalog-filter__cost-range {
       padding: 3px 88px 39px 50px; } }
+  @media (max-width: 767px) {
+    .catalog-filter__cost-range {
+      padding: 3px 10px 30px 10px; } }
 
 .catalog-filter__range-controls {
   position: relative;
@@ -2177,12 +2226,16 @@ input:checked + .catalog-filter__label::after {
 .catalog-filter__bar {
   width: 52%;
   height: 1px;
-  background-color: #a87b62;
-  margin-left: 26.5%; }
+  margin-left: 26.5%;
+  background-color: #a87b62; }
   @media (max-width: 1023px) {
     .catalog-filter__bar {
       width: 57.9%;
       margin-left: 18%; } }
+  @media (max-width: 767px) {
+    .catalog-filter__bar {
+      width: 55.2%;
+      margin-left: 19.6%; } }
 
 .catalog-filter__toggle {
   position: absolute;
@@ -2205,6 +2258,9 @@ input:checked + .catalog-filter__label::after {
   @media (max-width: 1023px) {
     .catalog-filter__toggle--min {
       left: 18%; } }
+  @media (max-width: 767px) {
+    .catalog-filter__toggle--min {
+      left: 19.6%; } }
 
 .catalog-filter__toggle--max {
   left: 78.5%;
@@ -2212,6 +2268,9 @@ input:checked + .catalog-filter__label::after {
   @media (max-width: 1023px) {
     .catalog-filter__toggle--max {
       left: 75.7%; } }
+  @media (max-width: 767px) {
+    .catalog-filter__toggle--max {
+      left: 74.8%; } }
 
 .catalog-filter__price-controls {
   display: flex;

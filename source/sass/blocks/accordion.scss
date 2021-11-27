@@ -38,7 +38,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    padding-bottom: 12px;
+    padding-bottom: 21px;
   }
 }
 
@@ -125,6 +125,14 @@
     width: 16px;
     height: 16px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    top: 60%;
+    right: 23px;
+
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .accordion__item--closed .accordion__button--filter::before {
@@ -148,6 +156,14 @@
 
     width: 16px;
     height: 16px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 45%;
+    right: 23px;
+
+    width: 14px;
+    height: 14px;
   }
 }
 
