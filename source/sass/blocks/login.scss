@@ -139,7 +139,6 @@
 }
 
 .login__link-help {
-
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -163,6 +162,7 @@
 
   background: $brown;
   border: 1px solid $brown;
+  cursor: pointer;
 }
 
 .login__signup {
@@ -190,4 +190,33 @@
   font-size: 14px;
   line-height: 21px;
   color: $black-text;
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.login__button:hover,
+.login__link-help:hover,
+.login__link-signup:hover  {
+  color: $brown-dark;
+}
+
+.login__item input:hover {
+  background-color: rgba($white, 0.4);
+}
+
+//focus
+.login__button:focus,
+.login__link-help:focus,
+.login__link-signup:focus,
+.login__item input:focus  {
+  outline: 2px solid $brown-dark;
+}
+
+//active
+.login__button:active,
+.login__link-help:active,
+.login__link-signup:active,
+.login__item input:active {
+  opacity: 0.7;
+  outline: none;
 }

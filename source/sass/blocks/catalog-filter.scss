@@ -449,16 +449,10 @@ input:hover + .catalog-filter__label::before {
 }
 
 .catalog-filter__button--apply:hover,
-.catalog-filter__button--filter:hover {
-  color: $brown-dark;
-  background-color: $white;
-}
-
+.catalog-filter__button--filter:hover,
 .catalog-filter__button--clear:hover {
-  color: $white;
-  background-color: $brown;
+  color: $brown-dark;
 }
-
 
 .catalog-filter__toggle--min:hover,
 .catalog-filter__toggle--max:hover {

@@ -241,6 +241,151 @@ img {
 .site-pages a {
   color: #1d1613; }
 
+.page-no-scroll {
+  height: 100vh;
+  overflow: hidden; }
+
+.accordion__item--closed .accordion__content {
+  display: none; }
+
+.accordion__item--nojs .accordion__content {
+  display: block; }
+
+.accordion__item--active .accordion__content {
+  display: block; }
+
+.accordion__button {
+  position: relative; }
+
+.accordion__item--active .accordion__button--faq {
+  padding-bottom: 7px; }
+  @media (max-width: 1023px) {
+    .accordion__item--active .accordion__button--faq {
+      padding-bottom: 25px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__button--faq {
+      padding-bottom: 12px; } }
+
+.accordion__item--active .accordion__button--filter {
+  padding-bottom: 18px; }
+  @media (max-width: 1023px) {
+    .accordion__item--active .accordion__button--filter {
+      padding-bottom: 22px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__button--filter {
+      padding-bottom: 21px; } }
+
+.accordion__item--active .accordion__button--faq::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  right: 51px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #a87b62;
+  border-bottom: 1px solid #a87b62; }
+  @media (max-width: 1023px) {
+    .accordion__item--active .accordion__button--faq::after {
+      top: 65%;
+      width: 16px;
+      height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__button--faq::after {
+      top: 48%;
+      right: 27px;
+      width: 12px;
+      height: 12px; } }
+
+.accordion__item--closed .accordion__button--faq::before {
+  content: "";
+  position: absolute;
+  top: 48%;
+  right: 51px;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #a87b62;
+  border-bottom: 1px solid #a87b62; }
+  @media (max-width: 1023px) {
+    .accordion__item--closed .accordion__button--faq::before {
+      top: 45%;
+      width: 16px;
+      height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--closed .accordion__button--faq::before {
+      top: 30%;
+      right: 27px;
+      width: 12px;
+      height: 12px; } }
+
+.accordion__item--active .accordion__button--filter::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 26px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #a87b62;
+  border-bottom: 1px solid #a87b62; }
+  @media (max-width: 1023px) {
+    .accordion__item--active .accordion__button--filter::after {
+      top: 65%;
+      right: 42px;
+      width: 16px;
+      height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__button--filter::after {
+      top: 60%;
+      right: 23px;
+      width: 14px;
+      height: 14px; } }
+
+.accordion__item--closed .accordion__button--filter::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 26px;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #a87b62;
+  border-bottom: 1px solid #a87b62; }
+  @media (max-width: 1023px) {
+    .accordion__item--closed .accordion__button--filter::before {
+      top: 45%;
+      right: 42px;
+      width: 16px;
+      height: 16px; } }
+  @media (max-width: 767px) {
+    .accordion__item--closed .accordion__button--filter::before {
+      top: 45%;
+      right: 23px;
+      width: 14px;
+      height: 14px; } }
+
+.accordion__item--nojs .accordion__button::before {
+  display: none; }
+
+.accordion__item--nojs .accordion__button::after {
+  display: none; }
+
+/*=============СТАЙЛГАЙД ДЛЯ СТРЕЛОК============*/
+.accordion__button--faq:hover::after,
+.accordion__button--faq:hover::before,
+.accordion__button--filter:hover::after,
+.accordion__button--filter:hover::before {
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000; }
+
+.accordion__button--faq:focus::after,
+.accordion__button--faq:focus::before,
+.accordion__button--filter:focus::after,
+.accordion__button--filter:focus::before {
+  border-left: 1px solid #6b3906;
+  border-bottom: 1px solid #6b3906; }
+
 .page-header {
   position: relative; }
   @media (max-width: 1023px) {
@@ -1129,151 +1274,6 @@ img {
   @media (max-width: 767px) {
     .promo__inner--catalog p {
       line-height: 26px; } }
-
-.page-no-scroll {
-  height: 100vh;
-  overflow: hidden; }
-
-.accordion__item--closed .accordion__content {
-  display: none; }
-
-.accordion__item--nojs .accordion__content {
-  display: block; }
-
-.accordion__item--active .accordion__content {
-  display: block; }
-
-.accordion__button {
-  position: relative; }
-
-.accordion__item--active .accordion__button--faq {
-  padding-bottom: 7px; }
-  @media (max-width: 1023px) {
-    .accordion__item--active .accordion__button--faq {
-      padding-bottom: 25px; } }
-  @media (max-width: 767px) {
-    .accordion__item--active .accordion__button--faq {
-      padding-bottom: 12px; } }
-
-.accordion__item--active .accordion__button--filter {
-  padding-bottom: 18px; }
-  @media (max-width: 1023px) {
-    .accordion__item--active .accordion__button--filter {
-      padding-bottom: 22px; } }
-  @media (max-width: 767px) {
-    .accordion__item--active .accordion__button--filter {
-      padding-bottom: 21px; } }
-
-.accordion__item--active .accordion__button--faq::after {
-  content: "";
-  position: absolute;
-  top: 80%;
-  right: 51px;
-  transform: translateY(-50%) rotate(135deg);
-  width: 10px;
-  height: 10px;
-  border-left: 1px solid #a87b62;
-  border-bottom: 1px solid #a87b62; }
-  @media (max-width: 1023px) {
-    .accordion__item--active .accordion__button--faq::after {
-      top: 65%;
-      width: 16px;
-      height: 16px; } }
-  @media (max-width: 767px) {
-    .accordion__item--active .accordion__button--faq::after {
-      top: 48%;
-      right: 27px;
-      width: 12px;
-      height: 12px; } }
-
-.accordion__item--closed .accordion__button--faq::before {
-  content: "";
-  position: absolute;
-  top: 48%;
-  right: 51px;
-  transform: translateY(-50%) rotate(-45deg);
-  width: 10px;
-  height: 10px;
-  border-left: 1px solid #a87b62;
-  border-bottom: 1px solid #a87b62; }
-  @media (max-width: 1023px) {
-    .accordion__item--closed .accordion__button--faq::before {
-      top: 45%;
-      width: 16px;
-      height: 16px; } }
-  @media (max-width: 767px) {
-    .accordion__item--closed .accordion__button--faq::before {
-      top: 30%;
-      right: 27px;
-      width: 12px;
-      height: 12px; } }
-
-.accordion__item--active .accordion__button--filter::after {
-  content: "";
-  position: absolute;
-  top: 55%;
-  right: 26px;
-  transform: translateY(-50%) rotate(135deg);
-  width: 10px;
-  height: 10px;
-  border-left: 1px solid #a87b62;
-  border-bottom: 1px solid #a87b62; }
-  @media (max-width: 1023px) {
-    .accordion__item--active .accordion__button--filter::after {
-      top: 65%;
-      right: 42px;
-      width: 16px;
-      height: 16px; } }
-  @media (max-width: 767px) {
-    .accordion__item--active .accordion__button--filter::after {
-      top: 60%;
-      right: 23px;
-      width: 14px;
-      height: 14px; } }
-
-.accordion__item--closed .accordion__button--filter::before {
-  content: "";
-  position: absolute;
-  top: 45%;
-  right: 26px;
-  transform: translateY(-50%) rotate(-45deg);
-  width: 10px;
-  height: 10px;
-  border-left: 1px solid #a87b62;
-  border-bottom: 1px solid #a87b62; }
-  @media (max-width: 1023px) {
-    .accordion__item--closed .accordion__button--filter::before {
-      top: 45%;
-      right: 42px;
-      width: 16px;
-      height: 16px; } }
-  @media (max-width: 767px) {
-    .accordion__item--closed .accordion__button--filter::before {
-      top: 45%;
-      right: 23px;
-      width: 14px;
-      height: 14px; } }
-
-.accordion__item--nojs .accordion__button::before {
-  display: none; }
-
-.accordion__item--nojs .accordion__button::after {
-  display: none; }
-
-/*=============СТАЙЛГАЙД ДЛЯ СТРЕЛОК============*/
-.accordion__button--faq:hover::after,
-.accordion__button--faq:hover::before,
-.accordion__button--filter:hover::after,
-.accordion__button--filter:hover::before {
-  border-left: 1px solid #000000;
-  border-bottom: 1px solid #000000; }
-
-.accordion__button--faq:focus::after,
-.accordion__button--faq:focus::before,
-.accordion__button--filter:focus::after,
-.accordion__button--filter:focus::before {
-  border-left: 1px solid #6b3906;
-  border-bottom: 1px solid #6b3906; }
 
 .new {
   position: relative;
@@ -2530,13 +2530,9 @@ input:hover + .catalog-filter__label::before {
   border: 1px solid #6b3906; }
 
 .catalog-filter__button--apply:hover,
-.catalog-filter__button--filter:hover {
-  color: #6b3906;
-  background-color: #ffffff; }
-
+.catalog-filter__button--filter:hover,
 .catalog-filter__button--clear:hover {
-  color: #ffffff;
-  background-color: #a87b62; }
+  color: #6b3906; }
 
 .catalog-filter__toggle--min:hover,
 .catalog-filter__toggle--max:hover {
@@ -2698,7 +2694,8 @@ input:active + .catalog-filter__label::before,
   text-align: center;
   color: #ffffff;
   background: #a87b62;
-  border: 1px solid #a87b62; }
+  border: 1px solid #a87b62;
+  cursor: pointer; }
 
 .login__signup {
   display: flex;
@@ -2722,3 +2719,25 @@ input:active + .catalog-filter__label::before,
   font-size: 14px;
   line-height: 21px;
   color: #1d1613; }
+
+/*=============СТАЙЛГАЙД============*/
+.login__button:hover,
+.login__link-help:hover,
+.login__link-signup:hover {
+  color: #6b3906; }
+
+.login__item input:hover {
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.login__button:focus,
+.login__link-help:focus,
+.login__link-signup:focus,
+.login__item input:focus {
+  outline: 2px solid #6b3906; }
+
+.login__button:active,
+.login__link-help:active,
+.login__link-signup:active,
+.login__item input:active {
+  opacity: 0.7;
+  outline: none; }
