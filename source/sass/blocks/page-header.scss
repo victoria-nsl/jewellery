@@ -553,7 +553,8 @@
 
 
 //Шапка для страницы Фильтр
-.page-header--filter {
+.page-header--filter,
+.page-header--login {
   position: static;
 
   height: 115px;
@@ -570,7 +571,8 @@
   }
 }
 
-.page-header__logo-link--filter svg {
+.page-header__logo-link--filter svg,
+.page-header--login svg {
   fill: $brown;
 }
 
@@ -597,7 +599,8 @@
 }
 
 .page-header__logo-link[href]:hover svg,
-.page-header__logo-link--filter:hover svg {
+.page-header__logo-link--filter:hover svg,
+.page-header__logo-link--login:hover svg {
   fill: $brown-dark;
 }
 

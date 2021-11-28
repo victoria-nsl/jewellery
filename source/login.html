@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Exclusive Jewellery: PERFECTION made to be yours">
-  <title>Jewellery</title>
+  <title>Jewellery - login page</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -16,12 +16,47 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <main>
-    <a class="login__logo-link" href="main.html" aria-label="Перейти на главную страницу">
+  <header class="page-header page-header--login">
+    <a class="page-header__logo-link page-header__logo-link--login" href="main.html" aria-label="Перейти на главную страницу">
       <svg role="img" width="66" height="66">
         <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
       </svg>
     </a>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Login page</h1>
+    <section class="login">
+      <div class="login__inner">
+        <h2 class="visually-hidden">Login form</h2>
+        <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="login__fieldset">
+            <legend>
+              Log In
+            </legend>
+            <ul class="login__list">
+              <li class="login__item">
+                <label class="visually-hidden" for="email">Your E-mail</label>
+                <input id="email" type="email" name="email" placeholder="Your E-mail" autocomplete="off" required>
+              </li>
+              <li class="login__item">
+                <label class="visually-hidden" for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password" autocomplete="off" required>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="login__help">
+            <a class="login__link-help" href="#">Forgot your password?</a>
+          </div>
+          <button class="login__button" type="submit">
+            Log in
+          </button>
+          <div class="login__signup">
+            <span>Don’t have an account?</span>
+            <a class="login__link-signup" href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 </body>
 </html>

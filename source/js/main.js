@@ -1,5 +1,5 @@
 const page = document.body;
-const menu = document.querySelector('[data-header]');
+const menu = document.querySelector('.page-header--general');
 const navigationToggle =  document.querySelector('.page-header__toggle');
 
 const itemsAccordionFaq = document.querySelectorAll('.faq__item');
@@ -130,3 +130,5 @@ if (slider) {
     swiper.pagination.update();
   });
 }
+
+/*================МОДАЛЬНЫЕ ОКНА======================*/

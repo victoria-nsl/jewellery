@@ -20,7 +20,7 @@
   <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
     page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
     page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
-  <header class="page-header page-header--closed page-header--nojs" data-header="">
+  <header class="page-header page-header--general page-header--closed page-header--nojs">
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
@@ -399,7 +399,7 @@
       <section class="page-footer__news-updates">
         <h2>The good stuff in your inbox </h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="page-footer__form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="page-footer__form" method="post" action="https://echo.htmlacademy.ru">
           <label class="visually-hidden" for="email">Your E-mail</label>
           <input id="email" type="email" name="email" placeholder="Your E-mail" autocomplete="off" required="">
           <button class="page-footer__button-email" type="submit">
