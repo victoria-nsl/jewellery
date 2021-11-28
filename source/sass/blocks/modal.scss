@@ -1,0 +1,21 @@
+.modal--filter {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.modal--filter .modal__toggle {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
+.modal--login {
+  display: none;
+}
+
+.modal--show {
+  display: block;
+}

@@ -107,104 +107,108 @@
       <section class="catalog-filter catalog-filter--page-main">
         <h2 class="visually-hidden">Product filter</h2>
         <a class="catalog-filter__button catalog-filter__button--filter" href="filter.html" aria-label="Перейти на страницу фильтра">Filter</a>
+        <div class="modal modal--filter">
+          <button class="modal__toggle" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+          <form class="catalog-filter__form catalog-filter__form--page-main" action="https://echo.htmlacademy.ru" method="get">
+            <!-- accordion__item--nojs - содержимое вкладки открыто при отключенном js, значка у вкладки нет
+            accordion__item--closed - содержимое вкладки закрыто, значок у вкладки /стрелка вниз/
+            accordion__item--active - содержимое вкладки открыто, значок у вкладки /cтрелка вверх/-->
+            <div class="catalog-filter__wrapper-fieldset accordion">
+              <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
+                <legend>
+                  <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
+                    Product
+                  </button>
+                </legend>
+                <ul class="catalog-filter__list accordion__content">
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked="">
+                    <label class="catalog-filter__label" for="necklaces">Necklaces</label>
+                  </li>
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked="">
+                    <label class="catalog-filter__label" for="chokers">Chokers</label>
+                  </li>
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="rings" type="checkbox" name="rings">
+                    <label class="catalog-filter__label" for="rings">Rings</label>
+                  </li>
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked="">
+                    <label class="catalog-filter__label" for="earrings">Earrings</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-        <form class="catalog-filter__form catalog-filter__form--page-main" action="https://echo.htmlacademy.ru" method="get">
-          <!-- accordion__item--nojs - содержимое вкладки открыто при отключенном js, значка у вкладки нет
-          accordion__item--closed - содержимое вкладки закрыто, значок у вкладки /стрелка вниз/
-          accordion__item--active - содержимое вкладки открыто, значок у вкладки /cтрелка вверх/-->
-          <div class="catalog-filter__wrapper-fieldset accordion">
-            <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
-              <legend>
-                <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
-                  Product
-                </button>
-              </legend>
-              <ul class="catalog-filter__list accordion__content">
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked="">
-                  <label class="catalog-filter__label" for="necklaces">Necklaces</label>
-                </li>
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked="">
-                  <label class="catalog-filter__label" for="chokers">Chokers</label>
-                </li>
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="rings" type="checkbox" name="rings">
-                  <label class="catalog-filter__label" for="rings">Rings</label>
-                </li>
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked="">
-                  <label class="catalog-filter__label" for="earrings">Earrings</label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
+                <legend>
+                  <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
+                    Material
+                  </button>
+                </legend>
+                <ul class="catalog-filter__list accordion__content">
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="gold" type="checkbox" name="gold">
+                    <label class="catalog-filter__label" for="gold">Gold</label>
+                  </li>
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="silver" type="checkbox" name="silver" checked="">
+                    <label class="catalog-filter__label" for="silver">Silver</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-            <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
-              <legend>
-                <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
-                  Material
-                </button>
-              </legend>
-              <ul class="catalog-filter__list accordion__content">
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="gold" type="checkbox" name="gold">
-                  <label class="catalog-filter__label" for="gold">Gold</label>
-                </li>
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="silver" type="checkbox" name="silver" checked="">
-                  <label class="catalog-filter__label" for="silver">Silver</label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
+                <legend>
+                  <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
+                    Collection
+                  </button>
+                </legend>
+                <ul class="catalog-filter__list accordion__content">
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="flamingo" type="checkbox" name="flamingo">
+                    <label class="catalog-filter__label" for="flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="catalog-filter__item">
+                    <input class="visually-hidden" id="dreams" type="checkbox" name="dreams" checked="">
+                    <label class="catalog-filter__label" for="dreams">Dreams</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-            <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
-              <legend>
-                <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
-                  Collection
-                </button>
-              </legend>
-              <ul class="catalog-filter__list accordion__content">
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="flamingo" type="checkbox" name="flamingo">
-                  <label class="catalog-filter__label" for="flamingo">Pink flamingo</label>
-                </li>
-                <li class="catalog-filter__item">
-                  <input class="visually-hidden" id="dreams" type="checkbox" name="dreams" checked="">
-                  <label class="catalog-filter__label" for="dreams">Dreams</label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
-              <legend>
-                <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
-                  Price
-                </button>
-              </legend>
-              <div class="catalog-filter__cost-range accordion__content">
-                <div class="catalog-filter__range-controls">
-                  <div class="catalog-filter__scale">
-                    <div class="catalog-filter__bar"></div>
+              <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
+                <legend>
+                  <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
+                    Price
+                  </button>
+                </legend>
+                <div class="catalog-filter__cost-range accordion__content">
+                  <div class="catalog-filter__range-controls">
+                    <div class="catalog-filter__scale">
+                      <div class="catalog-filter__bar"></div>
+                    </div>
+                    <div class="catalog-filter__toggle catalog-filter__toggle--min" tabindex="0" aria-label="Маркер минимальной цены"></div>
+                    <div class="catalog-filter__toggle catalog-filter__toggle--max" tabindex="0" aria-label="Маркер максимальной цены"></div>
                   </div>
-                  <div class="catalog-filter__toggle catalog-filter__toggle--min" tabindex="0" aria-label="Маркер минимальной цены"></div>
-                  <div class="catalog-filter__toggle catalog-filter__toggle--max" tabindex="0" aria-label="Маркер максимальной цены"></div>
+                  <div class="catalog-filter__price-controls">
+                    <div class="catalog-filter__wrapper-input" data-price="$">
+                      <label class="visually-hidden" for="min-price">Minimum price</label>
+                      <input id="min-price" type="text" name="min-price" value="55">
+                    </div>
+                    <div class="catalog-filter__wrapper-input" data-price="$">
+                      <label class="visually-hidden" for="max-price">Maximum price</label>
+                      <input id="max-price" type="text" name="max-price" value="155">
+                    </div>
+                  </div>
                 </div>
-                <div class="catalog-filter__price-controls">
-                  <div class="catalog-filter__wrapper-input" data-price="$">
-                    <label class="visually-hidden" for="min-price">Minimum price</label>
-                    <input id="min-price" type="text" name="min-price" value="55">
-                  </div>
-                  <div class="catalog-filter__wrapper-input" data-price="$">
-                    <label class="visually-hidden" for="max-price">Maximum price</label>
-                    <input id="max-price" type="text" name="max-price" value="155">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <button class="catalog-filter__button catalog-filter__button--apply" type="submit">Apply</button>
-          <button class="catalog-filter__button catalog-filter__button--clear" type="reset">Clear All</button>
-        </form>
+              </fieldset>
+            </div>
+            <button class="catalog-filter__button catalog-filter__button--apply" type="submit">Apply</button>
+            <button class="catalog-filter__button catalog-filter__button--clear" type="reset">Clear All</button>
+          </form>
+        </div>
       </section>
 
       <section class="catalog-products">
@@ -476,6 +480,43 @@
       </nav>
     </div>
   </footer>
+  <div class="modal modal--login">
+    <section class="login">
+      <button class="login__toggle modal__toggle" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <div class="login__inner">
+        <h2 class="visually-hidden">Login form</h2>
+        <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="login__fieldset">
+            <legend>
+              Log In
+            </legend>
+            <ul class="login__list">
+              <li class="login__item">
+                <label class="visually-hidden" for="email-modal">Your E-mail</label>
+                <input id="email-modal" type="email" name="email" placeholder="Your E-mail" autocomplete="off" required="">
+              </li>
+              <li class="login__item">
+                <label class="visually-hidden" for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password" autocomplete="off" required="">
+              </li>
+            </ul>
+          </fieldset>
+          <div class="login__help">
+            <a class="login__link-help" href="#">Forgot your password?</a>
+          </div>
+          <button class="login__button" type="submit">
+            Log in
+          </button>
+          <div class="login__signup">
+            <span>Don’t have an account?</span>
+            <a class="login__link-signup" href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

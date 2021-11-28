@@ -17,8 +17,8 @@
   box-sizing: border-box;
 
   @media (max-width: $tablet-max-width) {
-    padding: 40px 0;
-    width: 57.5%;
+    width: 55%;
+    padding: 0;
     margin: 0;
   }
 
@@ -70,7 +70,7 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    padding: 34px 90px 34px 40px;
+    padding: 34px 90px 34px 21px;
 
     font-size: 18px;
     line-height: 23px;
@@ -93,8 +93,8 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    width: 82%;
-    margin-left: 9%;
+    width: 85.6%;
+    margin-left: 4.75%;
     margin-bottom: 24px;
   }
 
@@ -117,8 +117,8 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    width: 82%;
-    margin-left: 9%;
+    width: 85.6%;
+    margin-left: 4.75%;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -136,12 +136,6 @@
 
   @media (max-width: $mobile-max-width) {
     padding-bottom: 30px;
-  }
-}
-
-.catalog-filter__form--page-main {
-  @media (max-width: $tablet-max-width) {
-    display: none;
   }
 }
 
@@ -185,7 +179,7 @@
   padding: 0 34px 20px 34px;
 
   @media (max-width: $tablet-max-width) {
-    padding: 0 50px 22px 50px;
+    padding: 0 50px 22px 31px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -216,7 +210,7 @@
   cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    padding-left: 27px;
+    padding-left: 30px;
 
     font-size: 16px;
     line-height: 21px;
@@ -268,7 +262,7 @@ input:checked + .catalog-filter__label::after {
   padding: 0 24px 20px 24px;
 
   @media (max-width: $tablet-max-width) {
-    padding: 3px 88px 39px 50px;
+    padding: 3px 88px 39px 31px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -449,9 +443,13 @@ input:hover + .catalog-filter__label::before {
 }
 
 .catalog-filter__button--apply:hover,
-.catalog-filter__button--filter:hover,
+.catalog-filter__button--filter:hover {
+  color: $brown-dark;
+}
+
 .catalog-filter__button--clear:hover {
   color: $brown-dark;
+  border: 1px solid $black;
 }
 
 .catalog-filter__toggle--min:hover,

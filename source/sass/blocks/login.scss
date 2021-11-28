@@ -196,7 +196,7 @@
 //hover
 .login__button:hover,
 .login__link-help:hover,
-.login__link-signup:hover  {
+.login__link-signup:hover {
   color: $brown-dark;
 }
 
@@ -208,7 +208,7 @@
 .login__button:focus,
 .login__link-help:focus,
 .login__link-signup:focus,
-.login__item input:focus  {
+.login__item input:focus {
   outline: 2px solid $brown-dark;
 }
 
