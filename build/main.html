@@ -532,13 +532,13 @@
     </div>
   </footer>
   <div class="modal modal--login">
-    <section class="login">
-      <button class="login__toggle modal__toggle" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
+    <section class="login modal__card modal__card--login">
       <div class="login__inner">
+        <button class="modal__toggle modal__toggle--login" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
         <h2 class="visually-hidden">Login form</h2>
-        <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="login__form modal__form  modal__form--login" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="login__fieldset">
             <legend>
               Log In
@@ -549,8 +549,8 @@
                 <input id="email-modal" type="email" name="email" placeholder="Your E-mail" autocomplete="off" required="">
               </li>
               <li class="login__item">
-                <label class="visually-hidden" for="password">Password</label>
-                <input id="password" type="password" name="password" placeholder="Password" autocomplete="off" required="">
+                <label class="visually-hidden" for="password-modal">Password</label>
+                <input id="password-modal" type="password" name="password" placeholder="Password" autocomplete="off" required="">
               </li>
             </ul>
           </fieldset>
