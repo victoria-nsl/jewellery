@@ -11,7 +11,7 @@ const triggersFilter = document.querySelectorAll('.catalog-filter__button--legen
 const slider = document.querySelector('.swiper-conteiner');
 
 const formFooter = document.querySelector('.page-footer__form');
-const inputEmailFooter= document.querySelector('#email');
+const inputEmailFooter = document.querySelector('#email');
 
 const linkLogin =  document.querySelector('.page-header__link-navigation-user--login');
 
@@ -19,7 +19,7 @@ const overlayPopupLogin = document.querySelector('.modal--login');
 const buttonPopupLoginClose = document.querySelector('.modal__toggle--login');
 
 const formPopupLogin = document.querySelector('.modal__form--login');
-const inputEmailPopupLogin= document.querySelector('#email-modal');
+const inputEmailPopupLogin = document.querySelector('#email-modal');
 const inputPasswordPopupLogin= document.querySelector('#password-modal');
 
 const linkFilter =  document.querySelector('.catalog-filter__button--filter');
@@ -149,11 +149,10 @@ if (slider) {
 }
 
 /*======ПРОВЕРКА LocalStorage============*/
-
 let isStorageSupport = true;
 let storageEmail = '';
 
-const setItemLocalStorage = (email) => {
+const getItemLocalStorage = (email) => {
   try {
     storageEmail = localStorage.getItem('email');
   } catch (err) {
@@ -166,60 +165,43 @@ const setItemLocalStorage = (email) => {
 };
 
 if (inputEmailFooter) {
-  setItemLocalStorage(inputEmailFooter);
+  getItemLocalStorage(inputEmailFooter);
 }
 
 /*================МОДАЛЬНЫЕ ОКНА======================*/
-
-//ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
-const closePopupLogin = () => {
-  if (overlayPopupLogin.classList.contains('modal--show')) {
-    overlayPopupLogin.classList.remove('modal--show');
-  }
-
-  setItemLocalStorage (inputEmailPopupLogin);
+//Закрытие модальных окон
+const closePopup = (popup) => {
+  popup.classList.remove('modal--show');
   page.classList.remove('page-no-scroll');
 };
 
-const closePopupFilter = () => {
-  if (overlayPopupFilter.classList.contains('modal--show')) {
-    overlayPopupFilter.classList.remove('modal--show');
-  }
-  page.classList.remove('page-no-scroll');
-};
-
-const onOverlayClickLogin = (evt) => {
-  if (evt.target.matches('.modal--login')) { //останавливает погружение
-    evt.stopPropagation(); //останавливает всплытие
-    closePopupLogin();
-  }
-};
-
-const onOverlayClickFilter = (evt) => {
-  if (evt.target.matches('.modal--filter')) { //останавливает погружение
-    evt.stopPropagation(); //останавливает всплытие
-    closePopupFilter(evt);
-  }
-};
-
-const onButtonCloseClickLogin = (evt) => {
-  evt.preventDefault();
-  closePopupLogin();
-};
-
-const onButtonCloseClickFilter = (evt) => {
-  evt.preventDefault();
-  closePopupFilter();
-};
 
 if (overlayPopupLogin) {
-  overlayPopupLogin.addEventListener('click', onOverlayClickLogin);
-  buttonPopupLoginClose.addEventListener('click', onButtonCloseClickLogin);
+  overlayPopupLogin.addEventListener('click', (evt) => {
+    if (evt.target.matches('.modal--login')) {
+      evt.stopPropagation();
+      closePopup(overlayPopupLogin);
+    }
+  });
+
+  buttonPopupLoginClose.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    closePopup(overlayPopupLogin);
+  });
 }
 
 if (overlayPopupFilter) {
-  overlayPopupFilter.addEventListener('click', onOverlayClickFilter);
-  buttonPopupFilterClose.addEventListener('click', onButtonCloseClickFilter);
+  overlayPopupFilter.addEventListener('click', (evt) => {
+    if (evt.target.matches('.modal--filter')) {
+      evt.stopPropagation();
+      closePopup(overlayPopupFilter);
+    }
+  });
+
+  buttonPopupFilterClose.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    closePopup(overlayPopupFilter);
+  });
 }
 
 //Обработчик ESC
@@ -227,47 +209,41 @@ const onDocumentEscKeydown = (evt) => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (overlayPopupLogin) {
-      closePopupLogin();
+      closePopup(overlayPopupLogin);
     }
     if (overlayPopupFilter) {
-      closePopupFilter();
+      closePopup(overlayPopupFilter);
     }
     document.removeEventListener('keydown', onDocumentEscKeydown);
   }
 };
 
-const openPopupLogin = () => {
-  if(menu.classList.contains('page-header--opened')) {
-    closeMenu();
-  }
-  overlayPopupLogin.classList.add('modal--show');
-  page.classList.add('page-no-scroll');
-  setItemLocalStorage (inputEmailPopupLogin);
-  document.addEventListener('keydown', onDocumentEscKeydown);
-};
-
-const openPopupFilter = () => {
-  overlayPopupFilter.classList.add('modal--show');
+//открытие модальных окон
+const openPopup = (popup) => {
+  popup.classList.add('modal--show');
   page.classList.add('page-no-scroll');
   document.addEventListener('keydown', onDocumentEscKeydown);
 };
-
 
 if (linkLogin) {
   linkLogin.addEventListener('click', (evt) => {
     evt.preventDefault();
-    openPopupLogin();
+    if(menu.classList.contains('page-header--opened')) {
+      closeMenu();
+    }
+    openPopup(overlayPopupLogin);
+    getItemLocalStorage(inputEmailPopupLogin);
   });
 }
 
 if (linkFilter) {
   linkFilter.addEventListener('click', (evt) => {
     evt.preventDefault();
-    openPopupFilter();
+    openPopup(overlayPopupFilter);
   });
 }
 
-/*=========ОТПРАВКА ФОРМ==============*/
+/*================ОТПРАВКА ФОРМ==============*/
 if (formFooter) {
   formFooter.addEventListener('submit', (evt)  => {
     if (!inputEmailFooter.value) {
