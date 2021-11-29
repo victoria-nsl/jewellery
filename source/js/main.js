@@ -1,7 +1,7 @@
 (function () {
   const page = document.body;
   const menu = document.querySelector('.page-header--general');
-  const navigationToggle =  document.querySelector('.page-header__toggle');
+  const navigationToggle = document.querySelector('.page-header__toggle');
 
   const itemsAccordionFaq = document.querySelectorAll('.faq__item');
   const triggersFaq = document.querySelectorAll('.faq__button');
@@ -14,17 +14,17 @@
   const formFooter = document.querySelector('.page-footer__form');
   const inputEmailFooter = document.querySelector('#email');
 
-  const linkLogin =  document.querySelector('.page-header__link-navigation-user--login');
+  const linkLogin = document.querySelector('.page-header__link-navigation-user--login');
 
   const overlayPopupLogin = document.querySelector('.modal--login');
   const buttonPopupLoginClose = document.querySelector('.modal__toggle--login');
 
   const formPopupLogin = document.querySelector('.modal__form--login');
   const inputEmailPopupLogin = document.querySelector('#email-modal');
-  const inputPasswordPopupLogin= document.querySelector('#password-modal');
+  const inputPasswordPopupLogin = document.querySelector('#password-modal');
 
 
-  const linkFilter =  document.querySelector('.catalog-filter__button--filter');
+  const linkFilter = document.querySelector('.catalog-filter__button--filter');
 
   const overlayPopupFilter = document.querySelector('.modal--filter');
   const buttonPopupFilterClose = document.querySelector('.modal__toggle--filter');
@@ -65,7 +65,7 @@
   };
 
   if (itemsAccordionFaq) {
-    itemsAccordionFaq.forEach ((itemAccordionFaq) => {
+    itemsAccordionFaq.forEach((itemAccordionFaq) => {
       itemAccordionFaq.classList.remove('accordion__item--nojs');
     });
 
@@ -78,7 +78,7 @@
   }
 
   if (itemsAccordionFilter) {
-    itemsAccordionFilter.forEach ((itemAccordionFilter) => {
+    itemsAccordionFilter.forEach((itemAccordionFilter) => {
       itemAccordionFilter.classList.remove('accordion__item--nojs');
     });
 
@@ -94,7 +94,10 @@
   if (slider) {
     slider.classList.remove('new__slider--no-js');
 
-    const swiper = new window.Swiper (slider, {
+    const paginationDefault = (index, className) =>  `<span class="${className}">${index + 1}</span>`;
+
+
+    const swiper = new window.Swiper(slider, {
       spaceBetween: 30,
       simulateTouch: false,
       loop: true,
@@ -108,9 +111,7 @@
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
-        renderBullet: function (index, className) {
-          return `<span class="${className}">${index + 1}</span>`;
-        },
+        renderBullet: paginationDefault,
       },
 
       breakpoints: {
@@ -122,6 +123,12 @@
         '768': {
           slidesPerView: 2,
           slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            renderBullet: paginationDefault,
+          },
         },
 
         '0': {
@@ -133,9 +140,9 @@
             clickable: true,
             type: 'fraction',
             renderFraction: function (currentClass, totalClass) {
-              return `<span class="${ currentClass  }"></span>`
-            + 'of' +
-            `<span class="${ totalClass  }"></span>`;
+              return `<span class="${currentClass}"></span>`
+                + 'of' +
+                `<span class="${totalClass}"></span>`;
             },
           },
         },
@@ -160,7 +167,7 @@
     }
 
     if (storageEmail) {
-      email.value = storageEmail || '' ;
+      email.value = storageEmail || '';
     }
   };
 
@@ -231,10 +238,11 @@
   if (linkLogin) {
     linkLogin.addEventListener('click', (evt) => {
       evt.preventDefault();
-      if(menu.classList.contains('page-header--opened')) {
+      if (menu.classList.contains('page-header--opened')) {
         closeMenu();
       }
       openPopup(overlayPopupLogin);
+      inputEmailPopupLogin.focus();
       getItemLocalStorage(inputEmailPopupLogin);
     });
   }
@@ -248,11 +256,11 @@
 
   /*================ОТПРАВКА ФОРМ==============*/
   if (formFooter) {
-    formFooter.addEventListener('submit', (evt)  => {
+    formFooter.addEventListener('submit', (evt) => {
       if (!inputEmailFooter.value) {
         evt.preventDefault();
       } else {
-        if(isStorageSupport) {
+        if (isStorageSupport) {
           localStorage.setItem('email', inputEmailFooter.value);
         }
       }
@@ -260,11 +268,11 @@
   }
 
   if (formPopupLogin) {
-    formPopupLogin.addEventListener('submit', (evt)  => {
-      if (!inputPasswordPopupLogin|| !inputEmailPopupLogin.value) {
+    formPopupLogin.addEventListener('submit', (evt) => {
+      if (!inputPasswordPopupLogin || !inputEmailPopupLogin.value) {
         evt.preventDefault();
       } else {
-        if(isStorageSupport) {
+        if (isStorageSupport) {
           localStorage.setItem('email', inputEmailPopupLogin.value);
         }
         getItemLocalStorage(inputEmailFooter);

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
@@ -35,7 +37,7 @@
             </svg>
           </button>
         </form>
-        <a class="page-header__logo-link" href="main.html" aria-label="Перейти на главную страницу" >
+        <a class="page-header__logo-link" href="main.html" aria-label="Перейти на главную страницу">
           <svg role="img" width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -47,7 +49,7 @@
             </a>
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
-            <a  class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#">
               <p>
                 <span>Cart</span>
                 <span>0</span>
@@ -106,19 +108,23 @@
     <div class="page-main__wrapper-catalog">
       <section class="catalog-filter catalog-filter--page-main">
         <h2 class="visually-hidden">Product filter</h2>
-        <a class="catalog-filter__button catalog-filter__button--filter" href="filter.html" aria-label="Перейти на страницу фильтра">Filter</a>
+        <a class="catalog-filter__button catalog-filter__button--filter" href="filter.html"
+          aria-label="Перейти на страницу фильтра">Filter</a>
         <div class="modal modal--filter">
           <button class="modal__toggle modal__toggle--filter" type="button">
             <span class="visually-hidden">Закрыть окно</span>
           </button>
-          <form class="catalog-filter__form catalog-filter__form--page-main modal__card modal__card--filter " action="https://echo.htmlacademy.ru" method="get"  target="_blank">
+          <form class="catalog-filter__form catalog-filter__form--page-main modal__card modal__card--filter "
+            action="https://echo.htmlacademy.ru" method="get" target="_blank">
             <!-- accordion__item--nojs - содержимое вкладки открыто при отключенном js, значка у вкладки нет
             accordion__item--closed - содержимое вкладки закрыто, значок у вкладки /стрелка вниз/
             accordion__item--active - содержимое вкладки открыто, значок у вкладки /cтрелка вверх/-->
             <div class="catalog-filter__wrapper-fieldset accordion">
               <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
                 <legend>
-                  <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
+                  <button
+                    class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter"
+                    type="button">
                     Product
                   </button>
                 </legend>
@@ -128,15 +134,15 @@
                     <label class="catalog-filter__label" for="necklaces">Necklaces</label>
                   </li>
                   <li class="catalog-filter__item">
-                    <input  class="visually-hidden"  id="chokers" type="checkbox" name="chokers" checked>
+                    <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked>
                     <label class="catalog-filter__label" for="chokers">Chokers</label>
                   </li>
                   <li class="catalog-filter__item">
-                    <input class="visually-hidden"  id="rings" type="checkbox" name="rings">
+                    <input class="visually-hidden" id="rings" type="checkbox" name="rings">
                     <label class="catalog-filter__label" for="rings">Rings</label>
                   </li>
                   <li class="catalog-filter__item">
-                    <input class="visually-hidden"  id="earrings" type="checkbox" name="earrings" checked>
+                    <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked>
                     <label class="catalog-filter__label" for="earrings">Earrings</label>
                   </li>
                 </ul>
@@ -144,17 +150,19 @@
 
               <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
                 <legend>
-                  <button class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter" type="button">
+                  <button
+                    class="catalog-filter__button catalog-filter__button--legend  accordion__button accordion__button--filter"
+                    type="button">
                     Material
                   </button>
                 </legend>
                 <ul class="catalog-filter__list accordion__content">
                   <li class="catalog-filter__item">
-                    <input class="visually-hidden"  id="gold" type="checkbox" name="gold">
+                    <input class="visually-hidden" id="gold" type="checkbox" name="gold">
                     <label class="catalog-filter__label" for="gold">Gold</label>
                   </li>
                   <li class="catalog-filter__item">
-                    <input class="visually-hidden"  id="silver" type="checkbox" name="silver" checked>
+                    <input class="visually-hidden" id="silver" type="checkbox" name="silver" checked>
                     <label class="catalog-filter__label" for="silver">Silver</label>
                   </li>
                 </ul>
@@ -162,13 +170,15 @@
 
               <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
                 <legend>
-                  <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
+                  <button
+                    class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter"
+                    type="button">
                     Collection
                   </button>
                 </legend>
                 <ul class="catalog-filter__list accordion__content">
                   <li class="catalog-filter__item">
-                    <input class="visually-hidden"  id="flamingo" type="checkbox" name="flamingo">
+                    <input class="visually-hidden" id="flamingo" type="checkbox" name="flamingo">
                     <label class="catalog-filter__label" for="flamingo">Pink flamingo</label>
                   </li>
                   <li class="catalog-filter__item">
@@ -180,7 +190,9 @@
 
               <fieldset class="catalog-filter__fieldset accordion__item accordion__item--closed accordion__item--nojs">
                 <legend>
-                  <button class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter" type="button">
+                  <button
+                    class="catalog-filter__button catalog-filter__button--legend accordion__button accordion__button--filter"
+                    type="button">
                     Price
                   </button>
                 </legend>
@@ -189,17 +201,21 @@
                     <div class="catalog-filter__scale">
                       <div class="catalog-filter__bar"></div>
                     </div>
-                    <div  class="catalog-filter__toggle catalog-filter__toggle--min" tabindex="0" aria-label="Маркер минимальной цены"></div>
-                    <div  class="catalog-filter__toggle catalog-filter__toggle--max" tabindex="0" aria-label="Маркер максимальной цены"></div>
+                    <div class="catalog-filter__toggle catalog-filter__toggle--min" tabindex="0"
+                      aria-label="Маркер минимальной цены"></div>
+                    <div class="catalog-filter__toggle catalog-filter__toggle--max" tabindex="0"
+                      aria-label="Маркер максимальной цены"></div>
                   </div>
                   <div class="catalog-filter__price-controls">
                     <div class="catalog-filter__wrapper-input" data-price="$">
                       <label class="visually-hidden" for="min-price">Minimum price</label>
-                      <input id="min-price" type="text" name="min-price" value="55" pattern="[0-9]{1,3}" title="Введите значение от 0 до 999">
+                      <input id="min-price" type="text" name="min-price" value="55" pattern="[0-9]{1,3}"
+                        title="Введите значение от 0 до 999">
                     </div>
                     <div class="catalog-filter__wrapper-input" data-price="$">
                       <label class="visually-hidden" for="max-price">Maximum price</label>
-                      <input id="max-price" type="text" name="max-price" value="155" pattern="[0-9]{1,3}" title="Введите значение от 0 до 999">
+                      <input id="max-price" type="text" name="max-price" value="155" pattern="[0-9]{1,3}"
+                        title="Введите значение от 0 до 999">
                     </div>
                   </div>
                 </div>
@@ -217,11 +233,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile.webp 1x, img/catalog-1-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet.webp 1x, img/catalog-1-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-1-desktop.webp 1x, img/catalog-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-1-mobile.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-1-tablet.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-1-desktop.webp 1x, img/catalog-1-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-1-desktop.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt= "Фотография золотых сережек с жемчугом">
+                <img width="270" height="272" src="img/catalog-1-desktop.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x"
+                  alt="Фотография золотых сережек с жемчугом">
               </picture>
               <h3>Double pearl earrings</h3>
               <p>$ 115</p>
@@ -230,11 +250,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile.webp 1x, img/catalog-2-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet.webp 1x, img/catalog-2-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-2-desktop.webp 1x, img/catalog-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-2-mobile.webp 1x, img/catalog-2-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-2-tablet.webp 1x, img/catalog-2-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-2-desktop.webp 1x, img/catalog-2-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-2-desktop.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x" alt= "Фотография черного кожаного чокера с золотой бусинкой">
+                <img width="270" height="272" src="img/catalog-2-desktop.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x"
+                  alt="Фотография черного кожаного чокера с золотой бусинкой">
               </picture>
               <h3>Choker with gold bead</h3>
               <p>$ 55</p>
@@ -243,11 +267,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile.webp 1x, img/catalog-3-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet.webp 1x, img/catalog-3-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-3-desktop.webp 1x, img/catalog-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-3-mobile.webp 1x, img/catalog-3-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-3-tablet.webp 1x, img/catalog-3-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-3-desktop.webp 1x, img/catalog-3-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-3-desktop.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x" alt= "Фотография золотой цепочки с круглым кулоном">
+                <img width="270" height="272" src="img/catalog-3-desktop.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x"
+                  alt="Фотография золотой цепочки с круглым кулоном">
               </picture>
               <h3>Gold layered necklace</h3>
               <p>$ 155</p>
@@ -256,11 +284,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile.webp 1x, img/catalog-4-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet.webp 1x, img/catalog-4-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-4-desktop.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-4-mobile.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-4-tablet.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-4-desktop.webp 1x, img/catalog-4-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-4-desktop.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt= "Фотография голубого кулона на серебряной цепочке">
+                <img width="270" height="272" src="img/catalog-4-desktop.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x"
+                  alt="Фотография голубого кулона на серебряной цепочке">
               </picture>
               <h3>Blue gemstone pendant</h3>
               <p>$ 105</p>
@@ -269,11 +301,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile.webp 1x, img/catalog-5-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet.webp 1x, img/catalog-5-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-5-desktop.webp 1x, img/catalog-5-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-5-mobile.webp 1x, img/catalog-5-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-5-tablet.webp 1x, img/catalog-5-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-5-desktop.webp 1x, img/catalog-5-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-5-desktop.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x" alt= "Фотография золотых сережек с бирюзой">
+                <img width="270" height="272" src="img/catalog-5-desktop.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x"
+                  alt="Фотография золотых сережек с бирюзой">
               </picture>
               <h3>Boho earrings</h3>
               <p>$ 75</p>
@@ -282,11 +318,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile.webp 1x, img/catalog-6-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet.webp 1x, img/catalog-6-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-6-desktop.webp 1x, img/catalog-6-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-6-mobile.webp 1x, img/catalog-6-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-6-tablet.webp 1x, img/catalog-6-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-6-desktop.webp 1x, img/catalog-6-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-6-desktop.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x" alt= "Фотография золотого ожерелья">
+                <img width="270" height="272" src="img/catalog-6-desktop.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x"
+                  alt="Фотография золотого ожерелья">
               </picture>
               <h3>Gold bird necklace</h3>
               <p>$ 135</p>
@@ -295,11 +335,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile.webp 1x, img/catalog-7-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet.webp 1x, img/catalog-7-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-7-desktop.webp 1x, img/catalog-7-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-7-mobile.webp 1x, img/catalog-7-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-7-tablet.webp 1x, img/catalog-7-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-7-desktop.webp 1x, img/catalog-7-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-7-desktop.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x" alt= "Фотография черного кожаного чокера">
+                <img width="270" height="272" src="img/catalog-7-desktop.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x"
+                  alt="Фотография черного кожаного чокера">
               </picture>
               <h3>Black leather choker</h3>
               <p>$ 85</p>
@@ -308,11 +352,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile.webp 1x, img/catalog-8-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet.webp 1x, img/catalog-8-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-8-desktop.webp 1x, img/catalog-8-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-8-mobile.webp 1x, img/catalog-8-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-8-tablet.webp 1x, img/catalog-8-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-8-desktop.webp 1x, img/catalog-8-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-8-desktop.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x" alt= "Фотография сиреневого кулона из аметиста на серебряной цепочке">
+                <img width="270" height="272" src="img/catalog-8-desktop.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x"
+                  alt="Фотография сиреневого кулона из аметиста на серебряной цепочке">
               </picture>
               <h3>Necklace with amethyst</h3>
               <p>$ 145</p>
@@ -321,11 +369,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile.webp 1x, img/catalog-9-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet.webp 1x, img/catalog-9-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-9-desktop.webp 1x, img/catalog-9-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-9-mobile.webp 1x, img/catalog-9-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-9-tablet.webp 1x, img/catalog-9-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-9-desktop.webp 1x, img/catalog-9-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-9-desktop.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x" alt= "Фотография золотых сережек в форме слонов">
+                <img width="270" height="272" src="img/catalog-9-desktop.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x"
+                  alt="Фотография золотых сережек в форме слонов">
               </picture>
               <h3>Elephant earrings</h3>
               <p>$ 95</p>
@@ -334,11 +386,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile.webp 1x, img/catalog-10-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet.webp 1x, img/catalog-10-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-10-desktop.webp 1x, img/catalog-10-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-10-mobile.webp 1x, img/catalog-10-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-10-tablet.webp 1x, img/catalog-10-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-10-desktop.webp 1x, img/catalog-10-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-10-desktop.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x" alt= "Фотография серебряной цепочки с кулоном">
+                <img width="270" height="272" src="img/catalog-10-desktop.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x"
+                  alt="Фотография серебряной цепочки с кулоном">
               </picture>
               <h3>Threader necklace</h3>
               <p>$ 115</p>
@@ -347,11 +403,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile.webp 1x, img/catalog-11-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet.webp 1x, img/catalog-11-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-11-desktop.webp 1x, img/catalog-11-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-11-mobile.webp 1x, img/catalog-11-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-11-tablet.webp 1x, img/catalog-11-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-11-desktop.webp 1x, img/catalog-11-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-11-desktop.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt= "Фотография серебряной цепочки с кулоном ввиде журавля оригами">
+                <img width="270" height="272" src="img/catalog-11-desktop.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x"
+                  alt="Фотография серебряной цепочки с кулоном ввиде журавля оригами">
               </picture>
               <h3>Origami crane necklace</h3>
               <p>$ 105</p>
@@ -360,11 +420,15 @@
           <li class="catalog-products__item">
             <a class="catalog-products__link" href="#" aria-label="Перейти на страницу товара">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile.webp 1x, img/catalog-12-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet.webp 1x, img/catalog-12-tablet@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-12-desktop.webp 1x, img/catalog-12-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-12-mobile.webp 1x, img/catalog-12-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-12-tablet.webp 1x, img/catalog-12-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/catalog-12-desktop.webp 1x, img/catalog-12-desktop@2x.webp 2x">
                 <!--1x: 270x272px  2x: 540x544px-->
-                <img width="270" height="272" src="img/catalog-11-desktop.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt= "Фотография серебряных серег со вставками из белого мрамора">
+                <img width="270" height="272" src="img/catalog-11-desktop.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x"
+                  alt="Фотография серебряных серег со вставками из белого мрамора">
               </picture>
               <h3>Marble earrings</h3>
               <p>$ 95</p>
@@ -375,25 +439,27 @@
     </div>
     <div class="catalog-navigation">
       <div class="catalog-navigation__inner">
-        <button class="catalog-navigation__button catalog-navigation__button--prev" type="button" aria-label="перейти на предыдущую страницу">Previous</button>
-      <ul class="catalog-navigation__pagination-list">
-        <li class="catalog-navigation__pagination-item catalog-navigation__pagination-item--active">
-          <a>1</a>
-        </li>
-        <li class="catalog-navigation__pagination-item">
-          <a href="#" aria-label="перейти на страницу 2">2</a>
-        </li>
-        <li class="catalog-navigation__pagination-item">
-          <a href="#" aria-label="перейти на страницу 3">3</a>
-        </li>
-        <li class="catalog-navigation__pagination-item">
-          <a href="#" aria-label="перейти на страницу 4">4</a>
-        </li>
-        <li class="catalog-navigation__pagination-item">
-          <a href="#" aria-label="перейти на страницу 5">5</a>
-        </li>
-      </ul>
-      <button class="catalog-navigation__button catalog-navigation__button-next" type="button" aria-label="перейти на следующую страницу">Next</button>
+        <button class="catalog-navigation__button catalog-navigation__button--prev" type="button"
+          aria-label="перейти на предыдущую страницу">Previous</button>
+        <ul class="catalog-navigation__pagination-list">
+          <li class="catalog-navigation__pagination-item catalog-navigation__pagination-item--active">
+            <a>1</a>
+          </li>
+          <li class="catalog-navigation__pagination-item">
+            <a href="#" aria-label="перейти на страницу 2">2</a>
+          </li>
+          <li class="catalog-navigation__pagination-item">
+            <a href="#" aria-label="перейти на страницу 3">3</a>
+          </li>
+          <li class="catalog-navigation__pagination-item">
+            <a href="#" aria-label="перейти на страницу 4">4</a>
+          </li>
+          <li class="catalog-navigation__pagination-item">
+            <a href="#" aria-label="перейти на страницу 5">5</a>
+          </li>
+        </ul>
+        <button class="catalog-navigation__button catalog-navigation__button-next" type="button"
+          aria-label="перейти на следующую страницу">Next</button>
       </div>
     </div>
   </main>
@@ -487,7 +553,8 @@
           <span class="visually-hidden">Закрыть окно</span>
         </button>
         <h2 class="visually-hidden">Login form</h2>
-        <form class="login__form modal__form  modal__form--login" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+        <form class="login__form modal__form  modal__form--login" action="https://echo.htmlacademy.ru" method="post"
+          target="_blank">
           <fieldset class="login__fieldset">
             <legend>
               Log In
@@ -499,7 +566,8 @@
               </li>
               <li class="login__item">
                 <label class="visually-hidden" for="password-modal">Password</label>
-                <input id="password-modal" type="password" name="password" placeholder="Password" autocomplete="off" required>
+                <input id="password-modal" type="password" name="password" placeholder="Password" autocomplete="off"
+                  required>
               </li>
             </ul>
           </fieldset>
@@ -519,4 +587,5 @@
   </div>
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
