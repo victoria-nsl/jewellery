@@ -18,8 +18,8 @@
 
 <body>
   <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
-    page-header--closed - закрытое меню, кнопка для открытия /гамбургер/
-    page-header--opened - открытое меню, кнопка для закрытия /гамбургер/ -->
+    page-header--closed - закрытое меню, кнопка для открытия /черный цвет, гамбургер/
+    page-header--opened - открытое меню, кнопка для закрытия /белый цвет, гамбургер/ -->
   <header class="page-header page-header--general page-header--closed page-header--nojs">
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -108,10 +108,10 @@
         <h2 class="visually-hidden">Product filter</h2>
         <a class="catalog-filter__button catalog-filter__button--filter" href="filter.html" aria-label="Перейти на страницу фильтра">Filter</a>
         <div class="modal modal--filter">
-          <button class="modal__toggle" type="button">
+          <button class="modal__toggle modal__toggle--filter" type="button">
             <span class="visually-hidden">Закрыть окно</span>
           </button>
-          <form class="catalog-filter__form catalog-filter__form--page-main" action="https://echo.htmlacademy.ru" method="get">
+          <form class="catalog-filter__form catalog-filter__form--page-main modal__card modal__card--filter " action="https://echo.htmlacademy.ru" method="get">
             <!-- accordion__item--nojs - содержимое вкладки открыто при отключенном js, значка у вкладки нет
             accordion__item--closed - содержимое вкладки закрыто, значок у вкладки /стрелка вниз/
             accordion__item--active - содержимое вкладки открыто, значок у вкладки /cтрелка вверх/-->
@@ -195,11 +195,11 @@
                   <div class="catalog-filter__price-controls">
                     <div class="catalog-filter__wrapper-input" data-price="$">
                       <label class="visually-hidden" for="min-price">Minimum price</label>
-                      <input id="min-price" type="text" name="min-price" value="55">
+                      <input id="min-price" type="text" name="min-price" value="55" pattern="[0-9]{1,3}" title="Введите значение от 0 до 999">
                     </div>
                     <div class="catalog-filter__wrapper-input" data-price="$">
                       <label class="visually-hidden" for="max-price">Maximum price</label>
-                      <input id="max-price" type="text" name="max-price" value="155">
+                      <input id="max-price" type="text" name="max-price" value="155" pattern="[0-9]{1,3}" title="Введите значение от 0 до 999">
                     </div>
                   </div>
                 </div>

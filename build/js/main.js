@@ -22,6 +22,11 @@ const formPopupLogin = document.querySelector('.modal__form--login');
 const inputEmailPopupLogin= document.querySelector('#email-modal');
 const inputPasswordPopupLogin= document.querySelector('#password-modal');
 
+const linkFilter =  document.querySelector('.catalog-filter__button--filter');
+
+const overlayPopupFilter = document.querySelector('.modal--filter');
+const buttonPopupFilterClose = document.querySelector('.modal__toggle--filter');
+
 /*======ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ ============*/
 const closeMenu = () => {
   menu.classList.add('page-header--closed');
@@ -167,7 +172,7 @@ if (inputEmailFooter) {
 /*================МОДАЛЬНЫЕ ОКНА======================*/
 
 //ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
-const closePopup = () => {
+const closePopupLogin = () => {
   if (overlayPopupLogin.classList.contains('modal--show')) {
     overlayPopupLogin.classList.remove('modal--show');
   }
@@ -176,29 +181,57 @@ const closePopup = () => {
   page.classList.remove('page-no-scroll');
 };
 
-const onOverlayClick = (evt) => {
+const closePopupFilter = () => {
+  if (overlayPopupFilter.classList.contains('modal--show')) {
+    overlayPopupFilter.classList.remove('modal--show');
+  }
+  page.classList.remove('page-no-scroll');
+};
+
+const onOverlayClickLogin = (evt) => {
   if (evt.target.matches('.modal--login')) { //останавливает погружение
     evt.stopPropagation(); //останавливает всплытие
-    closePopup();
+    closePopupLogin();
   }
 };
 
-const onButtonCloseClick = (evt) => {
+const onOverlayClickFilter = (evt) => {
+  if (evt.target.matches('.modal--filter')) { //останавливает погружение
+    evt.stopPropagation(); //останавливает всплытие
+    closePopupFilter(evt);
+  }
+};
+
+const onButtonCloseClickLogin = (evt) => {
   evt.preventDefault();
-  closePopup();
+  closePopupLogin();
+};
+
+const onButtonCloseClickFilter = (evt) => {
+  evt.preventDefault();
+  closePopupFilter();
 };
 
 if (overlayPopupLogin) {
-  overlayPopupLogin.addEventListener('click', onOverlayClick);
-  buttonPopupLoginClose.addEventListener('click', onButtonCloseClick);
+  overlayPopupLogin.addEventListener('click', onOverlayClickLogin);
+  buttonPopupLoginClose.addEventListener('click', onButtonCloseClickLogin);
 }
 
-//ОТКРЫТИЕ ФОРМЫ LOGIN
+if (overlayPopupFilter) {
+  overlayPopupFilter.addEventListener('click', onOverlayClickFilter);
+  buttonPopupFilterClose.addEventListener('click', onButtonCloseClickFilter);
+}
+
 //Обработчик ESC
 const onDocumentEscKeydown = (evt) => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    closePopup();
+    if (overlayPopupLogin) {
+      closePopupLogin();
+    }
+    if (overlayPopupFilter) {
+      closePopupFilter();
+    }
     document.removeEventListener('keydown', onDocumentEscKeydown);
   }
 };
@@ -213,10 +246,24 @@ const openPopupLogin = () => {
   document.addEventListener('keydown', onDocumentEscKeydown);
 };
 
+const openPopupFilter = () => {
+  overlayPopupFilter.classList.add('modal--show');
+  page.classList.add('page-no-scroll');
+  document.addEventListener('keydown', onDocumentEscKeydown);
+};
+
+
 if (linkLogin) {
   linkLogin.addEventListener('click', (evt) => {
     evt.preventDefault();
     openPopupLogin();
+  });
+}
+
+if (linkFilter) {
+  linkFilter.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openPopupFilter();
   });
 }
 
