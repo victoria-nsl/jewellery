@@ -1,4 +1,5 @@
 (function () {
+  const KEY_ESC = 27;
   const page = document.body;
   const menu = document.querySelector('.page-header--general');
   const navigationToggle = menu.querySelector('.page-header__toggle');
@@ -215,7 +216,7 @@
 
   //Обработчик ESC
   const onDocumentEscKeydown = (evt) => {
-    if (evt.keyCode === 27) {
+    if (evt.keyCode === KEY_ESC) {
       evt.preventDefault();
       if (overlayPopupLogin) {
         closePopup(overlayPopupLogin);
