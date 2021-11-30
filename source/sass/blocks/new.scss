@@ -4,7 +4,7 @@
   max-width: 1230px;
   width: 100vw;
   margin: 0 auto;
-  margin-bottom: 114px;
+  margin-bottom: 115px;
   padding: 0 30px;
   box-sizing: border-box;
 
@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
     padding: 0 4.7%;
   }
 }
@@ -176,7 +176,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   object-fit: cover;
   pointer-events: none;
@@ -199,6 +199,10 @@
   font-size: 16px;
   line-height: 21px;
   text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    width: 95%;
+  }
 }
 
 .new__item:nth-child(4n-1) h3 {
@@ -206,8 +210,12 @@
     margin-left: 13px;
   }
 
+  @media (max-width: $tablet-max-width) {
+    margin-left: 23px;
+  }
+
   @media (max-width: $mobile-max-width) {
-    margin-left: 0;
+    margin-left: 5px;
   }
 }
 

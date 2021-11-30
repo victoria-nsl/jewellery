@@ -48,7 +48,7 @@
   @media (max-width: $tablet-max-width) {
     display: block;
     width: 100%;
-    padding: 24px;
+    padding: 22px 24px 23px 24px;
 
     color: $white;
 
@@ -259,7 +259,7 @@ input:checked + .catalog-filter__label::after {
 
 //Ползунок
 .catalog-filter__cost-range {
-  padding: 0 24px 20px 24px;
+  padding: 0 24px 22px 24px;
 
   @media (max-width: $tablet-max-width) {
     padding: 3px 88px 39px 31px;
@@ -277,10 +277,11 @@ input:checked + .catalog-filter__label::after {
   align-items: center;
   width: 100%;
   min-height: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   @media (max-width: $tablet-max-width) {
     min-height: 18px;
+    margin-bottom: 12px;
   }
 }
 

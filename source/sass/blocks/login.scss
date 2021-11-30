@@ -46,7 +46,7 @@
 }
 
 .login__form {
-  padding: 50px 45px 54px 45px;
+  padding: 50px 47px 54px 43px;
 
   background-color: $brown-light;
 
@@ -55,7 +55,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 38px 15px 42px 15px;
+    padding: 38px 15px 40px 15px;
   }
 }
 
@@ -119,6 +119,7 @@
 
   border: none;
   border-bottom: 1px solid $black-text;
+  border-radius: 0;
   background-color: $brown-light;
 
   &::placeholder {
@@ -148,6 +149,7 @@
   vertical-align: middle;
   width: 100%;
   margin-bottom: 14px;
+  margin-left: 2px;
   padding: 23px 24px 22px 24px;
   box-sizing: border-box;
 
@@ -161,6 +163,14 @@
   background: $brown;
   border: 1px solid $brown;
   cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .login__signup {
