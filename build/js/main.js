@@ -1,7 +1,7 @@
 (function () {
   const page = document.body;
   const menu = document.querySelector('.page-header--general');
-  const navigationToggle = document.querySelector('.page-header__toggle');
+  const navigationToggle = menu.querySelector('.page-header__toggle');
 
   const itemsAccordionFaq = document.querySelectorAll('.faq__item');
   const triggersFaq = document.querySelectorAll('.faq__button');
@@ -12,16 +12,16 @@
   const slider = document.querySelector('.swiper-conteiner');
 
   const formFooter = document.querySelector('.page-footer__form');
-  const inputEmailFooter = document.querySelector('#email');
+  const inputEmailFooter = formFooter.querySelector('#email');
 
   const linkLogin = document.querySelector('.page-header__link-navigation-user--login');
 
   const overlayPopupLogin = document.querySelector('.modal--login');
-  const buttonPopupLoginClose = document.querySelector('.modal__toggle--login');
+  const buttonPopupLoginClose = overlayPopupLogin.querySelector('.modal__toggle--login');
 
-  const formPopupLogin = document.querySelector('.modal__form--login');
-  const inputEmailPopupLogin = document.querySelector('#email-modal');
-  const inputPasswordPopupLogin = document.querySelector('#password-modal');
+  const formPopupLogin = overlayPopupLogin.querySelector('.modal__form--login');
+  const inputEmailPopupLogin = formPopupLogin.querySelector('#email-modal');
+  const inputPasswordPopupLogin = formPopupLogin.querySelector('#password-modal');
 
 
   const linkFilter = document.querySelector('.catalog-filter__button--filter');

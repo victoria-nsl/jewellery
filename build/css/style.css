@@ -1278,13 +1278,14 @@ img {
 .new {
   position: relative;
   max-width: 1230px;
-  width: 100vw;
+  width: calc(100vw - 17px);
   margin: 0 auto;
   margin-bottom: 115px;
   padding: 0 30px;
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .new {
+      width: 100vw;
       margin-bottom: 65px;
       padding: 0 45px; } }
   @media (max-width: 767px) {
@@ -1339,9 +1340,11 @@ img {
       bottom: -4px; } }
 
 .new__slider {
-  width: 100%;
   height: auto;
   overflow: hidden; }
+  @media (max-width: 1023px) {
+    .new__slider {
+      width: 100%; } }
 
 .new__button {
   display: flex;
