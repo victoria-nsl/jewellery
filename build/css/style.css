@@ -1841,7 +1841,7 @@ img {
   cursor: pointer; }
   @media (max-width: 1023px) {
     .faq__button {
-      padding: 44px 44px 43px 50px; } }
+      padding: 44px 101px 43px 50px; } }
   @media (max-width: 767px) {
     .faq__button {
       padding: 18px 50px 19px 25px;
