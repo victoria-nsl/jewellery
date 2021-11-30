@@ -94,7 +94,7 @@
   if (slider) {
     slider.classList.remove('new__slider--no-js');
 
-    const paginationDefault = (index, className) =>  `<span class="${className}">${index + 1}</span>`;
+    const setPaginationDefault = (index, className) =>  `<span class='${className}'>${index + 1}</span>`;
 
 
     const swiper = new window.Swiper(slider, {
@@ -111,7 +111,7 @@
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
-        renderBullet: paginationDefault,
+        renderBullet: setPaginationDefault,
       },
 
       breakpoints: {
@@ -127,7 +127,7 @@
             el: '.swiper-pagination',
             type: 'bullets',
             clickable: true,
-            renderBullet: paginationDefault,
+            renderBullet: setPaginationDefault,
           },
         },
 
@@ -140,9 +140,9 @@
             clickable: true,
             type: 'fraction',
             renderFraction: function (currentClass, totalClass) {
-              return `<span class="${currentClass}"></span>`
+              return `<span class='${currentClass}'></span>`
                 + 'of' +
-                `<span class="${totalClass}"></span>`;
+                `<span class='${totalClass}'></span>`;
             },
           },
         },
