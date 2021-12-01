@@ -264,7 +264,7 @@
         return;
       }
       if (document.activeElement === linkSignUpPopup) {
-        inputEmailPopupLogin.focus();
+        buttonPopupLoginClose.focus();
         evt.preventDefault();
       }
     });
