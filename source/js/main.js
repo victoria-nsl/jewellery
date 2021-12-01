@@ -1,6 +1,7 @@
 (function () {
   const KEY_ESC = 27;
   const KEYCODE_TAB = 9;
+  const WIDTH_DESKTOP = 1024;
 
   const page = document.body;
   const menu = document.querySelector('.page-header--general');
@@ -31,6 +32,7 @@
 
   const overlayPopupFilter = document.querySelector('.modal--filter');
   const buttonPopupFilterClose = document.querySelector('.modal__toggle--filter');
+  const buttonPopupFilterClear = document.querySelector('.catalog-filter__button--clear');
 
   /*======ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ ============*/
   const closeMenu = () => {
@@ -254,6 +256,7 @@
     linkFilter.addEventListener('click', (evt) => {
       evt.preventDefault();
       openPopup(overlayPopupFilter);
+      buttonPopupFilterClose.focus();
     });
   }
 
@@ -265,6 +268,42 @@
       }
       if (document.activeElement === linkSignUpPopup) {
         buttonPopupLoginClose.focus();
+        evt.preventDefault();
+      }
+    });
+
+    buttonPopupLoginClose.addEventListener('keydown', (evt) => {
+      const isShiftPressed = evt.shiftKey;
+      if (!isShiftPressed) {
+        return;
+      }
+      if (document.activeElement === buttonPopupLoginClose) {
+        linkSignUpPopup.focus();
+        evt.preventDefault();
+      }
+    });
+  }
+
+  if (buttonPopupFilterClear) {
+    buttonPopupFilterClear.addEventListener('keydown', (evt) => {
+      const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (document.activeElement === buttonPopupFilterClear && page.clientWidth < WIDTH_DESKTOP) {
+        buttonPopupFilterClose.focus();
+        evt.preventDefault();
+      }
+    });
+
+    buttonPopupFilterClose.addEventListener('keydown', (evt) => {
+      const isShiftPressed = evt.shiftKey;
+      if (!isShiftPressed) {
+        return;
+      }
+      if (document.activeElement === buttonPopupFilterClose && page.clientWidth < WIDTH_DESKTOP) {
+        buttonPopupFilterClear.focus();
         evt.preventDefault();
       }
     });
