@@ -1280,13 +1280,13 @@ img {
   max-width: 1230px;
   width: calc(100vw - 17px);
   margin: 0 auto;
-  margin-bottom: 115px;
+  margin-bottom: 110px;
   padding: 0 30px;
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .new {
       width: 100vw;
-      margin-bottom: 65px;
+      margin-bottom: 60px;
       padding: 0 45px; } }
   @media (max-width: 767px) {
     .new {
@@ -1479,6 +1479,7 @@ img {
       text-align: center; } }
 
 .new__slider .swiper-pagination-bullet {
+  margin-bottom: 5px;
   color: #9b9997;
   cursor: pointer; }
 
@@ -1531,6 +1532,9 @@ img {
 .new__slider .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):focus {
   outline: 2px solid #6b3906; }
 
+.swiper-pagination-bullet-active:focus {
+  outline: none; }
+
 .new__link:active,
 .new__link-slide:active,
 .new__button--next:active,
@@ -1552,8 +1556,9 @@ img {
       padding: 0 45px; } }
   @media (max-width: 767px) {
     .blog {
+      width: 290px;
       margin-bottom: 60px;
-      padding: 0 4.7%; } }
+      padding: 0; } }
 
 .blog h2 {
   width: 100px;
@@ -2114,10 +2119,11 @@ img {
 
 .catalog-navigation__inner {
   display: flex;
+  justify-content: space-between;
   max-width: 1230px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px 0 30px;
+  padding: 0 30px 0 330px;
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .catalog-navigation__inner {
@@ -2140,21 +2146,14 @@ img {
     .catalog-navigation__button {
       display: none; } }
 
-.catalog-navigation__button--prev {
-  margin-left: 25.6%; }
-  @media (max-width: 1023px) {
-    .catalog-navigation__button--prev {
-      margin-left: 0; } }
-
 .catalog-navigation__pagination-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  width: 12.8%;
-  margin-right: 28.5%;
-  margin-left: 27.1%; }
+  width: 115px;
+  margin-right: 19px; }
   @media (max-width: 1023px) {
     .catalog-navigation__pagination-list {
       width: 16.4%;
@@ -2167,7 +2166,7 @@ img {
       margin-left: 27%; } }
 
 .catalog-navigation__pagination-item {
-  margin-right: 12%; }
+  margin-right: 14px; }
   @media (max-width: 1023px) {
     .catalog-navigation__pagination-item {
       margin-right: 11.5%; } }

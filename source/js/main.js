@@ -1,5 +1,7 @@
 (function () {
   const KEY_ESC = 27;
+  const KEYCODE_TAB = 9;
+
   const page = document.body;
   const menu = document.querySelector('.page-header--general');
   const navigationToggle = menu.querySelector('.page-header__toggle');
@@ -23,7 +25,7 @@
   const formPopupLogin = overlayPopupLogin.querySelector('.modal__form--login');
   const inputEmailPopupLogin = formPopupLogin.querySelector('#email-modal');
   const inputPasswordPopupLogin = formPopupLogin.querySelector('#password-modal');
-
+  const linkSignUpPopup = formPopupLogin.querySelector('.login__link-signup');
 
   const linkFilter = document.querySelector('.catalog-filter__button--filter');
 
@@ -218,11 +220,11 @@
   const onDocumentEscKeydown = (evt) => {
     if (evt.keyCode === KEY_ESC) {
       evt.preventDefault();
-      if (overlayPopupLogin) {
+      if (overlayPopupLogin.classList.contains('modal--show')) {
         closePopup(overlayPopupLogin);
         formPopupLogin.reset();
       }
-      if (overlayPopupFilter) {
+      if (overlayPopupFilter.classList.contains('modal--show')) {
         closePopup(overlayPopupFilter);
       }
       document.removeEventListener('keydown', onDocumentEscKeydown);
@@ -252,6 +254,19 @@
     linkFilter.addEventListener('click', (evt) => {
       evt.preventDefault();
       openPopup(overlayPopupFilter);
+    });
+  }
+
+  if (linkSignUpPopup) {
+    linkSignUpPopup.addEventListener('keydown', (evt) => {
+      const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+      if (!isTabPressed) {
+        return;
+      }
+      if (document.activeElement === linkSignUpPopup) {
+        inputEmailPopupLogin.focus();
+        evt.preventDefault();
+      }
     });
   }
 

@@ -12,8 +12,9 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    width: 290px;
     margin-bottom: 60px;
-    padding: 0 4.7%;
+    padding: 0;
   }
 }
 

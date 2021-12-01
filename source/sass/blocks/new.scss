@@ -4,13 +4,13 @@
   max-width: 1230px;
   width: calc(100vw - 17px);
   margin: 0 auto;
-  margin-bottom: 115px;
+  margin-bottom: 110px;
   padding: 0 30px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-max-width) {
     width: 100vw;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
     padding: 0 45px;
   }
 
@@ -256,6 +256,7 @@
 }
 
 .new__slider .swiper-pagination-bullet {
+  margin-bottom: 5px;
   color: $grey;
 
   cursor: pointer;
@@ -324,6 +325,10 @@
 .new__button--prev:focus,
 .new__slider .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):focus {
   outline: 2px solid $brown-dark;
+}
+
+.swiper-pagination-bullet-active:focus {
+  outline: none;
 }
 
 //active
