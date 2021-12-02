@@ -99,7 +99,7 @@
   if (slider) {
     slider.classList.remove('new__slider--no-js');
 
-    const setPaginationDefault = (index, className) =>  `<span class='${className}'>${index + 1}</span>`;
+    const setPaginationDefault = (index, className) => `<span class='${className}'>${index + 1}</span>`;
 
 
     const swiper = new window.Swiper(slider, {
@@ -260,51 +260,49 @@
     });
   }
 
-  if (linkSignUpPopup) {
+  //Ловушка для фокуса на модальных окнах
+  const setFocusTab = (evt, firstElement, lastElement) => {
+    const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+    if (!isTabPressed) {
+      return;
+    }
+    if (document.activeElement === lastElement) {
+      evt.preventDefault();
+      firstElement.focus();
+    }
+  };
+
+  const setFocusShift = (evt, firstElement, lastElement) => {
+    const isShiftPressed = evt.shiftKey;
+    if (!isShiftPressed) {
+      return;
+    }
+    if (document.activeElement === firstElement) {
+      evt.preventDefault();
+      lastElement.focus();
+    }
+  };
+
+  if (overlayPopupLogin) {
     linkSignUpPopup.addEventListener('keydown', (evt) => {
-      const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
-      if (!isTabPressed) {
-        return;
-      }
-      if (document.activeElement === linkSignUpPopup) {
-        buttonPopupLoginClose.focus();
-        evt.preventDefault();
-      }
+      setFocusTab(evt, buttonPopupLoginClose, linkSignUpPopup);
     });
 
     buttonPopupLoginClose.addEventListener('keydown', (evt) => {
-      const isShiftPressed = evt.shiftKey;
-      if (!isShiftPressed) {
-        return;
-      }
-      if (document.activeElement === buttonPopupLoginClose) {
-        linkSignUpPopup.focus();
-        evt.preventDefault();
-      }
+      setFocusShift(evt, buttonPopupLoginClose, linkSignUpPopup);
     });
   }
 
-  if (buttonPopupFilterClear) {
+  if (overlayPopupFilter) {
     buttonPopupFilterClear.addEventListener('keydown', (evt) => {
-      const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
-      if (!isTabPressed) {
-        return;
-      }
-
-      if (document.activeElement === buttonPopupFilterClear && page.clientWidth < WIDTH_DESKTOP) {
-        buttonPopupFilterClose.focus();
-        evt.preventDefault();
+      if (page.clientWidth < WIDTH_DESKTOP) {
+        setFocusTab(evt,  buttonPopupFilterClose, buttonPopupFilterClear);
       }
     });
 
     buttonPopupFilterClose.addEventListener('keydown', (evt) => {
-      const isShiftPressed = evt.shiftKey;
-      if (!isShiftPressed) {
-        return;
-      }
-      if (document.activeElement === buttonPopupFilterClose && page.clientWidth < WIDTH_DESKTOP) {
-        buttonPopupFilterClear.focus();
-        evt.preventDefault();
+      if (page.clientWidth < WIDTH_DESKTOP) {
+        setFocusShift(evt,  buttonPopupFilterClose, buttonPopupFilterClear);
       }
     });
   }
