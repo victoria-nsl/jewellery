@@ -262,25 +262,22 @@
 
   //Ловушка для фокуса на модальных окнах
   const setFocusTab = (evt, firstElement, lastElement) => {
+    const isShiftPressed = evt.shiftKey;
     const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
     if (!isTabPressed) {
       return;
     }
-    if (document.activeElement === lastElement) {
+
+    if (isShiftPressed && isTabPressed && document.activeElement === firstElement) {
+      lastElement.focus();
+      evt.preventDefault();
+    }
+
+    if (!isShiftPressed && isTabPressed && document.activeElement === lastElement) {
       evt.preventDefault();
       firstElement.focus();
     }
-  };
 
-  const setFocusShift = (evt, firstElement, lastElement) => {
-    const isShiftPressed = evt.shiftKey;
-    if (!isShiftPressed) {
-      return;
-    }
-    if (document.activeElement === firstElement) {
-      evt.preventDefault();
-      lastElement.focus();
-    }
   };
 
   if (overlayPopupLogin) {
@@ -289,20 +286,20 @@
     });
 
     buttonPopupLoginClose.addEventListener('keydown', (evt) => {
-      setFocusShift(evt, buttonPopupLoginClose, linkSignUpPopup);
+      setFocusTab(evt, buttonPopupLoginClose, linkSignUpPopup);
     });
   }
 
   if (overlayPopupFilter) {
     buttonPopupFilterClear.addEventListener('keydown', (evt) => {
       if (page.clientWidth < WIDTH_DESKTOP) {
-        setFocusTab(evt,  buttonPopupFilterClose, buttonPopupFilterClear);
+        setFocusTab(evt, . buttonPopupFilterClose, buttonPopupFilterClear);
       }
     });
 
     buttonPopupFilterClose.addEventListener('keydown', (evt) => {
       if (page.clientWidth < WIDTH_DESKTOP) {
-        setFocusShift(evt,  buttonPopupFilterClose, buttonPopupFilterClear);
+        setFocusTab(evt, buttonPopupFilterClose, buttonPopupFilterClear);
       }
     });
   }
