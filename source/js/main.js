@@ -293,7 +293,7 @@
   if (overlayPopupFilter) {
     buttonPopupFilterClear.addEventListener('keydown', (evt) => {
       if (page.clientWidth < WIDTH_DESKTOP) {
-        setFocusTab(evt, . buttonPopupFilterClose, buttonPopupFilterClear);
+        setFocusTab(evt, buttonPopupFilterClose, buttonPopupFilterClear);
       }
     });
 
